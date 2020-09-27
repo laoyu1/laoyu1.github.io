@@ -892,6 +892,18 @@ kbd {
   z-index: 0;
   width: 100%;
   height: 100%;
+  background: url("https://codgi-hexo.oss-cn-beijing.aliyuncs.com/pic/74874a63decb6ef7.jpg") no-repeat center/cover;
+}
+.header-banner::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
 }
 .header-banner-info {
   position: absolute;
