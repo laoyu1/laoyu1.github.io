@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-11-05T13:51:07.646Z</updated>
+  <updated>2020-11-08T12:50:24.344Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://example.com/2020/11/05/PTA%E7%BB%83%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     <id>http://example.com/2020/11/05/PTA%E7%BB%83%E4%B9%A0%E6%80%BB%E7%BB%93/</id>
     <published>2020-11-05T13:29:40.972Z</published>
-    <updated>2020-11-05T13:51:07.646Z</updated>
+    <updated>2020-11-08T12:50:24.344Z</updated>
     
-    <content type="html"><![CDATA[        <h2 id="练习2-15"   >          <a href="#练习2-15" class="heading-link"><i class="fas fa-link"></i></a>练习2-15</h2>      <p>练习2-15 求简单交错序列前N项和 (15分)<br>本题要求编写程序,计算序列 1 - 1/4 + 1/7 - 1/10 + … 的前N项之和。</p><a id="more"></a><p>输入格式:</p><p>输入在一行中给出一个正整数N。</p><p>输出格式:</p><p>在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后三位。题目保证计算结果不超过双精度范围。</p><p>输入样例:</p><pre><code>10</code></pre><p>输出样例:</p><pre><code>sum = 0.819</code></pre><p>在做这个题中遇到的问题是，没有掌握到如何进行交错的加减运算，在搜索之后发现，需要在循环中加一个 x = -x 即可。（我太菜了，是个憨批）</p><p><img src="https://ftp.bmp.ovh/imgs/2020/11/2c44fa7e11871fae.png"></p>        <h2 id="习题2-6"   >          <a href="#习题2-6" class="heading-link"><i class="fas fa-link"></i></a>习题2-6</h2>      <p>习题2-6 求阶乘序列前N项和 (15分)<br>本题要求编写程序，计算序列 1!+2!+3!+⋯ 的前N项之和。</p><p>输入格式:<br>输入在一行中给出一个不超过12的正整数N。</p><p>输出格式:<br>在一行中输出整数结果。</p><p>输入样例:</p><pre><code>5</code></pre><p>输出样例:</p><pre><code>153</code></pre><p>做这道题遇到的问题是，计算所得的数非常大，两个循环的思路是没有问题的，但关键在于，没有在第二个循环处将sum1的值再次变1。所以，只需要在第一个循环的内容加一个 sum1 = 1；且加在最前面即可。<br><img src="https://i.bmp.ovh/imgs/2020/11/a7f0bcbe56fc14f4.png"></p>]]></content>
+    <content type="html"><![CDATA[        <h2 id="练习2-15-交错的加减运算"   >          <a href="#练习2-15-交错的加减运算" class="heading-link"><i class="fas fa-link"></i></a>练习2-15 交错的加减运算</h2>      <p>练习2-15 求简单交错序列前N项和 (15分)<br>本题要求编写程序,计算序列 1 - 1/4 + 1/7 - 1/10 + … 的前N项之和。</p><a id="more"></a><p>输入格式:</p><p>输入在一行中给出一个正整数N。</p><p>输出格式:</p><p>在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后三位。题目保证计算结果不超过双精度范围。</p><p>输入样例:</p><pre><code>10</code></pre><p>输出样例:</p><pre><code>sum = 0.819</code></pre><p>在做这个题中遇到的问题是，没有掌握到如何进行交错的加减运算，在搜索之后发现，需要在循环中加一个 x = -x 即可。（我太菜了，是个憨批）</p><p><img src="https://ftp.bmp.ovh/imgs/2020/11/2c44fa7e11871fae.png"></p>        <h2 id="习题2-6-在循环后进行清零"   >          <a href="#习题2-6-在循环后进行清零" class="heading-link"><i class="fas fa-link"></i></a>习题2-6 在循环后进行清零</h2>      <p>习题2-6 求阶乘序列前N项和 (15分)<br>本题要求编写程序，计算序列 1!+2!+3!+⋯ 的前N项之和。</p><p>输入格式:<br>输入在一行中给出一个不超过12的正整数N。</p><p>输出格式:<br>在一行中输出整数结果。</p><p>输入样例:</p><pre><code>5</code></pre><p>输出样例:</p><pre><code>153</code></pre><p>做这道题遇到的问题是，计算所得的数非常大，两个循环的思路是没有问题的，但关键在于，没有在第二个循环处将sum1的值再次变1。所以，只需要在第一个循环的内容加一个 sum1 = 1；且加在最前面即可。<br><img src="https://i.bmp.ovh/imgs/2020/11/a7f0bcbe56fc14f4.png"></p>        <h2 id="练习3-3-c语言变量的初始化赋值"   >          <a href="#练习3-3-c语言变量的初始化赋值" class="heading-link"><i class="fas fa-link"></i></a>练习3-3 c语言变量的初始化赋值</h2>      <p>在做练习3-3时，average的平均数算出来非常的大，在检查算法后发现并没有出错，最后发现是没有对sum进行初始化赋值。在C语言中，如果没有对一个变量进行赋值，则为给它随机分配一个值，这就是为什么average非常大的原因，因为给sum随机赋了一个非常的值。</p><p><img src="https://i.bmp.ovh/imgs/2020/11/89097591beedba30.png"></p>]]></content>
     
     
-    <summary type="html">&lt;h2 id=&quot;练习2-15&quot;   &gt;
-          &lt;a href=&quot;#练习2-15&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;练习2-15&lt;/h2&gt;
+    <summary type="html">&lt;h2 id=&quot;练习2-15-交错的加减运算&quot;   &gt;
+          &lt;a href=&quot;#练习2-15-交错的加减运算&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;练习2-15 交错的加减运算&lt;/h2&gt;
       &lt;p&gt;练习2-15 求简单交错序列前N项和 (15分)&lt;br&gt;本题要求编写程序,计算序列 1 - 1/4 + 1/7 - 1/10 + … 的前N项之和。&lt;/p&gt;</summary>
     
     
