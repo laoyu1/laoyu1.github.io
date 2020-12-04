@@ -665,7 +665,7 @@ kbd {
 }
 .content-wrap {
   width: calc(100% - 330px);
-  float: left;
+  float: right;
 }
 .content-wrap--noside {
   float: none;
@@ -981,7 +981,7 @@ kbd {
 }
 .sidebar-wrap {
   width: 300px;
-  float: right;
+  float: left;
 }
 .sidebar-nav {
   padding-bottom: 1em;
@@ -1461,7 +1461,10 @@ kbd {
 .post-meta-item--createtime {
   color: var(--color-gray-700);
 }
-.post-meta-item--updatetime {
+.post-meta-item--wordcount {
+  color: var(--color-gray-700);
+}
+.post-meta-item--readtime {
   color: #49b1f5;
 }
 .post-meta-item--visitors {

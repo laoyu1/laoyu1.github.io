@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-11-30T13:05:49.505Z</updated>
+  <updated>2020-12-04T12:08:58.377Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java环境配置教程</title>
+    <link href="http://example.com/2020/12/03/java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/"/>
+    <id>http://example.com/2020/12/03/java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</id>
+    <published>2020-12-03T11:28:24.382Z</published>
+    <updated>2020-12-04T12:08:58.377Z</updated>
+    
+    <content type="html"><![CDATA[        <h2 id="前言"   >          <a href="#前言" class="heading-link"><i class="fas fa-link"></i></a>前言</h2>      <p>由于学习要用到brupsuite,但之前配置好的jdk14不行，所以重新下载了jdk1.8，在安装中遇到一些问题，在这里记录下来。</p><a id="more"></a>        <h2 id="1-下载"   >          <a href="#1-下载" class="heading-link"><i class="fas fa-link"></i></a>1.下载</h2>      <p>在官网下载<span class="exturl"><a class="exturl__link"   href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" >jdk</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，你可以选择不同的版本，我这里选择的是1.8版本。</p><p>由于我是Windows64位的电脑，所以选择的是红色框的那个，你可以根据你电脑的属性来选择应该下载的那个。<br><img src="https://i.bmp.ovh/imgs/2020/12/ec401f3da4532772.png"><br>下载好后（速度可能会很慢，，），安装即可。注意记住安装路径，这对之后的环境的配置有很大的用处！</p>        <h2 id="2-环境配置"   >          <a href="#2-环境配置" class="heading-link"><i class="fas fa-link"></i></a>2.环境配置</h2>      <p>安装好后，右键单击 <strong>此电脑</strong> ，选择<strong>属性</strong><br><img src="https://i.bmp.ovh/imgs/2020/12/a85bb7fb74a87611.png"><br>点击<strong>高级系统设置</strong><br><img src="https://i.bmp.ovh/imgs/2020/12/f238ad76b2d4e6b1.png"><br>点击<strong>环境变量</strong><br><img src="https://i.bmp.ovh/imgs/2020/12/8cb117d0caf34212.png"><br>在系统变量的下方，点击<strong>新建</strong><br><img src="https://i.bmp.ovh/imgs/2020/12/f141264322b3d41f.png"><br>变量名：<strong>CLASSPATH</strong></p><p>变量值：**.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;<strong>(注意开始是.;)<br><img src="https://i.bmp.ovh/imgs/2020/12/d7d3f84dfc17d71a.png"><br>变量名：</strong>JAVA_HOME**</p><p>变量值：<strong>D:\java1\jdk8</strong>（此处请填你jdk安装的路径！）<br><img src="https://i.bmp.ovh/imgs/2020/12/ae496e9d67fac7c8.png"><br>双击<strong>PATH</strong><br><img src="https://i.bmp.ovh/imgs/2020/12/08263be164b7196c.png"><br>将<strong>D:\java1\jdk8\bin、D:\java1\jdk8\jre\bin</strong> 分别添加进去(<strong>此处请填你jdk安装的路径！</strong>)（win7可以写做1条，win10写为两条）<br><img src="https://i.bmp.ovh/imgs/2020/12/6dbe4613552c5b96.png"><br>最后点击确定，就配置好了java环境。</p>        <h2 id="3-检验是否配置正确"   >          <a href="#3-检验是否配置正确" class="heading-link"><i class="fas fa-link"></i></a>3.检验是否配置正确</h2>      <p>win+r,输入cmd，进入命令行界面。输入java<br><img src="https://i.bmp.ovh/imgs/2020/12/d5991ed9e4686499.png"><br>输入javac<br><img src="https://i.bmp.ovh/imgs/2020/12/94c9fbeb764b2eeb.png"></p><p>输入java -version<br><img src="https://i.bmp.ovh/imgs/2020/12/c15e8f187a07d897.png"></p><p>如图所示，则java环境配置成功！！</p>        <h2 id="4-javac不是内部或外部命令，也不是可运行的程序-或批处理文件的细节问题"   >          <a href="#4-javac不是内部或外部命令，也不是可运行的程序-或批处理文件的细节问题" class="heading-link"><i class="fas fa-link"></i></a>4.javac不是内部或外部命令，也不是可运行的程序 或批处理文件的细节问题</h2>      <p>解决方法：</p><p>1、如果是按照上面的方法进行配置的，那么请检查你的jdk文件中的bin文件中，是否有<strong>javac.exe</strong>这个文件，如果没有，你需要重新下载jdk<br><img src="https://i.bmp.ovh/imgs/2020/12/189acd797bf730f1.png"></p><p>2、在设置变量时，不要使用相对定位，使用绝对定位<br>相对定位：%JAVA_HOME%\bin;<br>绝对定位：D:\java1\jdk8\bin;（你的jdk下载路径！！）</p><p>3、检查你是否将PATH变量中的两行写成了一行</p>        <h2 id="5-如何打开jar文件"   >          <a href="#5-如何打开jar文件" class="heading-link"><i class="fas fa-link"></i></a>5.如何打开jar文件</h2>      <p>1、打开cmd，将jar文件拖入其中<br>2、打开cmd，输入<strong>regedit</strong>注册表编辑器，找到<strong>HKEY_CLASSES_ROOT\jarfile\shell\open\command</strong>，（你可以在红框处直接搜索。<br><img src="https://i.bmp.ovh/imgs/2020/12/1d90a000103e362b.png"><br><img src="https://i.bmp.ovh/imgs/2020/12/777fd9c6934c59db.png"></p><p>双击，将红框中内容修改为”D:\java1\jdk8\bin\javaw.exe” -jar “%1” %*，注意！画红线处的地方为你的jdk下载路径。<br><img src="https://i.bmp.ovh/imgs/2020/12/ee2ee2cbf0afbb59.png"></p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;   &gt;
+          &lt;a href=&quot;#前言&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;前言&lt;/h2&gt;
+      &lt;p&gt;由于学习要用到brupsuite,但之前配置好的jdk14不行，所以重新下载了jdk1.8，在安装中遇到一些问题，在这里记录下来。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>2020年11月要结束了</title>
