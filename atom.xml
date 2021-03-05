@@ -36,27 +36,6 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://example.com/2020/12/10/PTA3/"/>
-    <id>http://example.com/2020/12/10/PTA3/</id>
-    <published>2020-12-10T15:40:32.163Z</published>
-    <updated>2020-12-10T15:41:43.451Z</updated>
-    
-    <content type="html"><![CDATA[<p>练习3-8 查询水果价格 (15分)<br>给定四种水果，分别是苹果（apple）、梨（pear）、桔子（orange）、葡萄（grape），单价分别对应为3.00元/公斤、2.50元/公斤、4.10元/公斤、10.20元/公斤。</p><p>首先在屏幕上显示以下菜单：</p><pre><code>[1] apple[2] pear[3] orange[4] grape[0] exit</code></pre><p>用户可以输入编号1~4查询对应水果的单价。当连续查询次数超过5次时，程序应自动退出查询；不到5次而用户输入0即退出；输入其他编号，显示价格为0。</p><p>输入格式:<br>输入在一行中给出用户连续输入的若干个编号。</p><p>输出格式:<br>首先在屏幕上显示菜单。然后对应用户的每个输入，在一行中按格式“price = 价格”输出查询结果，其中价格保留两位小数。当用户连续查询次数超过5次、或主动输入0时，程序结束。</p><p>输入样例1:<br>    3 -1 0 2</p><p>输出样例1:<br>  [1] apple<br>        [2] pear<br>        [3] orange<br>        [4] grape<br>        [0] exit<br>        price = 4.10<br>        price = 0.00</p><p>输入样例2:<br>1 2 3 3 4 4 5 6 7 8<br>输出样例2:<br>[1] apple<br>[2] pear<br>[3] orange<br>[4] grape<br>[0] exit<br>price = 3.00<br>price = 2.50<br>price = 4.10<br>price = 4.10<br>price = 10.20</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;练习3-8 查询水果价格 (15分)&lt;br&gt;给定四种水果，分别是苹果（apple）、梨（pear）、桔子（orange）、葡萄（grape），单价分别对应为3.00元/公斤、2.50元/公斤、4.10元/公斤、10.20元/公斤。&lt;/p&gt;
-&lt;p&gt;首先在屏幕上显示以下菜单：&lt;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>java环境配置教程</title>
     <link href="http://example.com/2020/12/03/java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/"/>
     <id>http://example.com/2020/12/03/java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</id>
