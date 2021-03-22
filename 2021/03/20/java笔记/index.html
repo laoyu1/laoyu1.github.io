@@ -1,29 +1,31 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/2.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/2.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="菜鸡的java学习之旅       复习java，顺便写一下java笔记">
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/2.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/2.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="菜鸡的java学习之旅复习java，顺便写一下java笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java笔记">
 <meta property="og:url" content="http://example.com/2021/03/20/java%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Laoyu&#39;blog">
-<meta property="og:description" content="菜鸡的java学习之旅       复习java，顺便写一下java笔记">
+<meta property="og:description" content="菜鸡的java学习之旅复习java，顺便写一下java笔记">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://doc.shiyanlou.com/document-uid79144labid1072timestamp1434941168916.png">
 <meta property="article:published_time" content="2021-03-20T08:10:13.447Z">
-<meta property="article:modified_time" content="2021-03-21T05:29:32.895Z">
+<meta property="article:modified_time" content="2021-03-22T12:10:11.176Z">
 <meta property="article:author" content="laoyu">
-<meta name="twitter:card" content="summary"><title>java笔记 | Laoyu'blog</title><link ref="canonical" href="http://example.com/2021/03/20/java%E7%AC%94%E8%AE%B0/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://doc.shiyanlou.com/document-uid79144labid1072timestamp1434941168916.png"><title>java笔记 | Laoyu'blog</title><link ref="canonical" href="http://example.com/2021/03/20/java%E7%AC%94%E8%AE%B0/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
 var CONFIG = {
   root: '/',
   algolia: undefined,
   fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
   sidebar: {"offsetTop":"20px","tocMaxDepth":6},
-  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
   postWidget: {"endText":true},
   nightMode: {"enable":true},
   back2top: {"enable":true},
-  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  codeblock: {"style":"default","highlight":"light","wordWrap":true},
   reward: false,
   fancybox: false,
   zoomImage: {"gapAside":"20px"},
   galleryWaterfall: undefined,
-  lazyload: ture,
+  lazyload: false,
   pjax: undefined,
   externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
   shortcuts: undefined,
@@ -32,55 +34,25 @@ var CONFIG = {
 };
 
 window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Laoyu'blog" type="application/atom+xml">
-</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Laoyu'blog</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">java笔记</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2021-03-20</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">2.2k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">13分</span></span><span class="post-meta-item post-meta-item--visitors leancloud_visitors" id="/2021/03/20/java%E7%AC%94%E8%AE%B0/" data-flag-title="java笔记"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value leancloud-visitors-count"></span></span></div></header><div class="post-body">
-        <h2 id="菜鸡的java学习之旅"   >
-          <a href="#菜鸡的java学习之旅" class="heading-link"><i class="fas fa-link"></i></a>菜鸡的java学习之旅</h2>
-      <p>复习java，顺便写一下java笔记</p>
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Laoyu'blog</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">java笔记</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2021-03-20</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2021-03-22</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">5.4k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">30分</span></span></div></header><div class="post-body"><h2 id="菜鸡的java学习之旅"><a href="#菜鸡的java学习之旅" class="headerlink" title="菜鸡的java学习之旅"></a>菜鸡的java学习之旅</h2><p>复习java，顺便写一下java笔记</p>
 <a id="more"></a>
 
-
-        <h2 id="基础知识"   >
-          <a href="#基础知识" class="heading-link"><i class="fas fa-link"></i></a>基础知识</h2>
-      
-        <h3 id="常量"   >
-          <a href="#常量" class="heading-link"><i class="fas fa-link"></i></a>常量</h3>
-      <p>常量是不能被修改的。</p>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>常量是不能被修改的。</p>
 <p>java中<strong>final</strong>关键字可以用于声明属性（常量），方法和类。在变量前面添加关键词final即可声明一个常量。<strong>常量名必须大写。</strong></p>
 <p>语法格式：</p>
 <pre><code>    final 数据类型 常量名 = 值；</code></pre>
 <p>例如：</p>
 <pre><code>    final double PI = 10.2；</code></pre>
-
-        <h3 id="数据类型"   >
-          <a href="#数据类型" class="heading-link"><i class="fas fa-link"></i></a>数据类型</h3>
-      
-        <h4 id="整数"   >
-          <a href="#整数" class="heading-link"><i class="fas fa-link"></i></a>整数</h4>
-      <p>byte、short、int、long 四种基本数据类型表示整数，需要注意的是 long 类型，使用 long 修饰的变量需要在数值后面加上 <strong>L</strong> 或者 <strong>l</strong></p>
-
-        <h4 id="浮点数"   >
-          <a href="#浮点数" class="heading-link"><i class="fas fa-link"></i></a>浮点数</h4>
-      <p>float 和 double 类型表示浮点数，即可以表示小数部分。需要注意的是 float 类型的数值后面需要加上 F 或者 f，否则会被当成 double 类型处理。double 类型的数值可以加上 D 或 d，也可以不加。</p>
-
-        <h4 id="char-类型"   >
-          <a href="#char-类型" class="heading-link"><i class="fas fa-link"></i></a>char 类型</h4>
-      <p>char 类型用于表示单个字符。需要将字符用单引号括起来char a = ‘a’，char 可以和整数互相转换，如果字符 a 也可以写成char a = 97。也可以用十六进制表示char a = ‘\u0061’。</p>
-
-        <h4 id="boolean-类型"   >
-          <a href="#boolean-类型" class="heading-link"><i class="fas fa-link"></i></a>boolean 类型</h4>
-      <p>boolean 类型（布尔类型）用于表示真值 true或者假值 false，Java 中布尔值不能和整数类型或者其它类型互相转换。</p>
-
-        <h4 id="String"   >
-          <a href="#String" class="heading-link"><i class="fas fa-link"></i></a>String</h4>
-      <p>Java 中使用 String 类来定义一个字符串，字符串是常量，它们的值在创建之后不能更改。字符串缓冲区支持可变的字符串。</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><h4 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h4><p>byte、short、int、long 四种基本数据类型表示整数，需要注意的是 long 类型，使用 long 修饰的变量需要在数值后面加上 <strong>L</strong> 或者 <strong>l</strong></p>
+<h4 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h4><p>float 和 double 类型表示浮点数，即可以表示小数部分。需要注意的是 float 类型的数值后面需要加上 F 或者 f，否则会被当成 double 类型处理。double 类型的数值可以加上 D 或 d，也可以不加。</p>
+<h4 id="char-类型"><a href="#char-类型" class="headerlink" title="char 类型"></a>char 类型</h4><p>char 类型用于表示单个字符。需要将字符用单引号括起来char a = ‘a’，char 可以和整数互相转换，如果字符 a 也可以写成char a = 97。也可以用十六进制表示char a = ‘\u0061’。</p>
+<h4 id="boolean-类型"><a href="#boolean-类型" class="headerlink" title="boolean 类型"></a>boolean 类型</h4><p>boolean 类型（布尔类型）用于表示真值 true或者假值 false，Java 中布尔值不能和整数类型或者其它类型互相转换。</p>
+<h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><p>Java 中使用 String 类来定义一个字符串，字符串是常量，它们的值在创建之后不能更改。字符串缓冲区支持可变的字符串。</p>
 <p>String 对象的初始化格式有如下两种：</p>
 <pre><code>    String s0 = &quot;abc&quot;;
     String s1 = new String(&quot;abd&quot;);</code></pre>
 <p>String 类具有丰富的方法，比如计算字符串的长度、连接字符串、比较字符串、提取字符串等等。</p>
-
-        <h5 id="计算字符串长度"   >
-          <a href="#计算字符串长度" class="heading-link"><i class="fas fa-link"></i></a>计算字符串长度</h5>
-      <p>length() 方法：</p>
+<h5 id="计算字符串长度"><a href="#计算字符串长度" class="headerlink" title="计算字符串长度"></a>计算字符串长度</h5><p>length() 方法：</p>
 <pre><code>    //方法原型
     public int length()&#123;
     &#125;</code></pre>
@@ -90,32 +62,21 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.2.0"><lin
     int len1 = s1.length();
     int len2 = s2.length();</code></pre>
 <p>则变量 len1 的值是 3，变量 len2 的值是 6。</p>
-
-        <h5 id="字符串比较"   >
-          <a href="#字符串比较" class="heading-link"><i class="fas fa-link"></i></a>字符串比较</h5>
-      <p>equals() 方法，该方法的作用是判断两个字符串对象的内容是否相同。如果相同则返回 true，否则返回 false。</p>
+<h5 id="字符串比较"><a href="#字符串比较" class="headerlink" title="字符串比较"></a>字符串比较</h5><p>equals() 方法，该方法的作用是判断两个字符串对象的内容是否相同。如果相同则返回 true，否则返回 false。</p>
 <p>equals() 方法比较是从第一字符开始，一个字符一个字符依次比较。</p>
 <p>equals比较原理</p>
 <p>如果想忽略掉大小写关系，比如：java 和 Java 是一样的，那怎么办呢？可以调用 equalsIgnoreCase() 方法，其用法与 equals() 一致，不过它会忽视大小写。</p>
 <p>而使用 “==” 比较的是两个对象在内存中存储的地址是否一样。</p>
-
-        <h5 id="字符串连接"   >
-          <a href="#字符串连接" class="heading-link"><i class="fas fa-link"></i></a>字符串连接</h5>
-      <p>字符串连接有两种方法：</p>
-<p>1.使用 +，比如 String s = “Hello “ + “World!”。而且使用 + 进行连接，不仅可以连接字符串，也可以连接其他类型。但是要求进行连接时至少有一个参与连接的内容是字符串类型。</p>
-<p>2.使用 String 类的 concat() 方法。</p>
-
-        <h3 id="运算符"   >
-          <a href="#运算符" class="heading-link"><i class="fas fa-link"></i></a>运算符</h3>
-      
-        <h4 id="算术运算符"   >
-          <a href="#算术运算符" class="heading-link"><i class="fas fa-link"></i></a>算术运算符</h4>
-      <p>自增 (++) 和自减 (–) 运算符有两种写法：前缀 <strong>（++i,–i）</strong> 和后缀 <strong>（i++,i–）</strong>。</p>
+<h5 id="字符串连接"><a href="#字符串连接" class="headerlink" title="字符串连接"></a>字符串连接</h5><p>字符串连接有两种方法：</p>
+<ul>
+<li><p>使用 +，比如 String s = “Hello “ + “World!”。而且使用 + 进行连接，不仅可以连接字符串，也可以连接其他类型。但是要求进行连接时至少有一个参与连接的内容是字符串类型。</p>
+</li>
+<li><p>使用 String 类的 concat() 方法。</p>
+</li>
+</ul>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h4 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h4><p>自增 (++) 和自减 (–) 运算符有两种写法：前缀 <strong>（++i,–i）</strong> 和后缀 <strong>（i++,i–）</strong>。</p>
 <p>前缀自增自减法 (++i,–i): 先进行自增或者自减运算，再进行表达式运算。<br>后缀自增自减法 (i++,i–): 先进行表达式运算，再进行自增或者自减运算</p>
-
-        <h4 id="位运算符"   >
-          <a href="#位运算符" class="heading-link"><i class="fas fa-link"></i></a>位运算符</h4>
-      <p>&amp;    按位与    如果相对应位都是 1，则结果为 1，否则为 0</p>
+<h4 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h4><p>&amp;    按位与    如果相对应位都是 1，则结果为 1，否则为 0</p>
 <pre><code>（a＆b），得到 12，即 0000 1100</code></pre>
 <p>丨    按位或    如果相对应位都是 0，则结果为 0，否则为 1</p>
 <pre><code>（ a 丨 b ）得到 61，即 0011 1101</code></pre>
@@ -129,10 +90,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.2.0"><lin
 <pre><code>a&gt;&gt;2 得到 15 即 1111</code></pre>
 <p> <strong>&gt;&gt;&gt;</strong>    按位右移补零    左操作数的值按右操作数指定的位数右移，移动得到的空位以零填充    </p>
 <pre><code>a&gt;&gt;&gt;2 得到 15 即 0000 1111</code></pre>
-
-        <h4 id="逻辑运算符"   >
-          <a href="#逻辑运算符" class="heading-link"><i class="fas fa-link"></i></a>逻辑运算符</h4>
-      <p>逻辑运算符是通过运算符将操作数或等式进行逻辑判断的语句。</p>
+<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><p>逻辑运算符是通过运算符将操作数或等式进行逻辑判断的语句。</p>
 <p>表格中的例子中，假设布尔变量 a 为真（true），变量 b 为假（false）：</p>
 <p>&amp;&amp; 或 &amp;    与    当且仅当两个操作数都为真，条件才为真</p>
 <pre><code>双目运算符    (a &amp;&amp; b) 或 (a &amp; b) 为假</code></pre>
@@ -144,26 +102,21 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.2.0"><lin
 <pre><code>双目运算符    (a ^ b) 为真</code></pre>
 <p>&amp;&amp; 与 || 是具有<strong>短路性质</strong>，当按优先级顺序计算到当前表达式时，表达式的结果可以确定整个表达式的结果时，便不会继续向后进行判断和计算，而直接返回结果。</p>
 <p>例如：当使用 &amp;&amp; 逻辑运算符时，在两个操作数都为 true 时，结果才为 true，但是当得到第一个操作为 false 时，其结果就必定是 false，这时候就不会再判断第二个操作了。在计算表达式 (a &amp; b) &amp;&amp; (a | b) 时，首先计算 a &amp; b 得到了 false，因为之后是 &amp;&amp;，任何值与 false 进行与操作都是 false，所以可以不用再计算下去，而直接返回 a &amp; b 的结果 false。</p>
-
-        <h4 id="关系运算符"   >
-          <a href="#关系运算符" class="heading-link"><i class="fas fa-link"></i></a>关系运算符</h4>
-      <p>== ，！=，&lt;,&gt;&lt;=,&gt;=</p>
+<h4 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h4><p>== ，！=，&lt;,&gt;&lt;=,&gt;=</p>
 <p>关系运算符生成的是一个 <strong>boolean（布尔）</strong> 结果，它们计算的是操作数的值之间的关系。如果关系是真实的，结果为 true（真），否则，结果为 false（假）。</p>
 <p>Java 还有唯一的一个三目运算符 <strong>?:</strong>  。</p>
 <p>语法格式：</p>
 <pre><code>布尔表达式 ？表达式 1 : 表达式 2;</code></pre>
 <p>运算过程：如果布尔表达式的值为 true，则返回表达式 1的值，否则返回表达式 2的值。</p>
 <p>注意</p>
-<p>1.== 和 != 适用于所有的基本数据类型，其他关系运算符不适用于 boolean，因为 boolean 值只有 true 和 false，比较没有任何意义。</p>
-<p>2.== 和 != 也适用于所有对象，可以比较对象的引用是否相同。</p>
-
-        <h3 id="关键字"   >
-          <a href="#关键字" class="heading-link"><i class="fas fa-link"></i></a>关键字</h3>
-      <p>Java 的关键字对 Java 的编译器有特殊的意义，他们用来表示一种数据类型，或者表示程序的结构等，关键字不能用作变量名、方法名、类名、包名。</p>
-
-        <h3 id="方法"   >
-          <a href="#方法" class="heading-link"><i class="fas fa-link"></i></a>方法</h3>
-      <p>Java 中的方法，可以将其看成一个功能的集合，它们是为了解决特定问题的代码组合。</p>
+<ul>
+<li><p>== 和 != 适用于所有的基本数据类型，其他关系运算符不适用于 boolean，因为 boolean 值只有 true 和 false，比较没有任何意义。</p>
+</li>
+<li><p>== 和 != 也适用于所有对象，可以比较对象的引用是否相同。</p>
+</li>
+</ul>
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><p>Java 的关键字对 Java 的编译器有特殊的意义，他们用来表示一种数据类型，或者表示程序的结构等，关键字不能用作变量名、方法名、类名、包名。</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>Java 中的方法，可以将其看成一个功能的集合，它们是为了解决特定问题的代码组合。</p>
 <p>方法的定义语法：</p>
 <pre><code>访问修饰符 返回值类型 方法名(参数列表) &#123;
     方法体
@@ -175,33 +128,235 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.2.0"><lin
 <p><strong>参数列表：</strong> 是传递给方法的参数列表，参数可以有多个，多个参数间以逗号隔开，每个参数由参数类型和参数名组成，以空格隔开。当方法被调用时，传递值给参数。这个值被称为实参或变量。参数列表是指方法的参数类型、顺序和参数的个数。参数是可选的，方法可以不包含任何参数。</p>
 <p><strong>方法体：</strong> 方法体包含具体的语句，定义该方法的功能。</p>
 <p>当方法定义好之后，需要调用才可以生效，我们可以通过 main 方法（main 方法是 Java 程序的入口，所以需要用它来调用）来调用它。</p>
-
-        <h3 id="if语句"   >
-          <a href="#if语句" class="heading-link"><i class="fas fa-link"></i></a>if语句</h3>
-      <p>多重 if 语句，在条件 1 不满足的情况下，才会进行条件 2 的判断，以此向下；当前面的条件均不成立时，最终执行 else 块内的代码。</p>
+<h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><p>多重 if 语句，在条件 1 不满足的情况下，才会进行条件 2 的判断，以此向下；当前面的条件均不成立时，最终执行 else 块内的代码。</p>
 <p>语法：</p>
-<p>if(条件1){<br>    代码块1<br>}<br>else if(条件2){<br>    代码块2<br>}<br>…<br>else {<br>    代码块n<br>}</p>
-</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://example.com">laoyu</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://example.com/2021/03/20/java%E7%AC%94%E8%AE%B0/">http://example.com/2021/03/20/java%E7%AC%94%E8%AE%B0/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2021/03/05/%E5%A4%A7%E4%BA%8C%E4%B8%8B%E5%AD%A6%E6%9C%9F%E5%BC%80%E5%A7%8B/"><span class="paginator-prev__text">大二下学期开始啦</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8F%9C%E9%B8%A1%E7%9A%84java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85"><span class="toc-number">1.</span> <span class="toc-text">
-          菜鸡的java学习之旅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">2.</span> <span class="toc-text">
-          基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-number">2.1.</span> <span class="toc-text">
-          常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.</span> <span class="toc-text">
-          数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B4%E6%95%B0"><span class="toc-number">2.2.1.</span> <span class="toc-text">
-          整数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="toc-number">2.2.2.</span> <span class="toc-text">
-          浮点数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#char-%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.3.</span> <span class="toc-text">
-          char 类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#boolean-%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.4.</span> <span class="toc-text">
-          boolean 类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#String"><span class="toc-number">2.2.5.</span> <span class="toc-text">
-          String</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%95%BF%E5%BA%A6"><span class="toc-number">2.2.5.1.</span> <span class="toc-text">
-          计算字符串长度</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83"><span class="toc-number">2.2.5.2.</span> <span class="toc-text">
-          字符串比较</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.2.5.3.</span> <span class="toc-text">
-          字符串连接</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.3.</span> <span class="toc-text">
-          运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.3.1.</span> <span class="toc-text">
-          算术运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.3.2.</span> <span class="toc-text">
-          位运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.3.3.</span> <span class="toc-text">
-          逻辑运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.3.4.</span> <span class="toc-text">
-          关系运算符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">2.4.</span> <span class="toc-text">
-          关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">2.5.</span> <span class="toc-text">
-          方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if%E8%AF%AD%E5%8F%A5"><span class="toc-number">2.6.</span> <span class="toc-text">
-          if语句</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/yuhangyuan.svg" alt="avatar"></div><p class="sidebar-ov-author__text">今天你学习了吗？</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">7</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">分类</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>laoyu</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.2.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+<pre><code>if(条件1)&#123;
+    代码块1
+&#125;
+else if(条件2)&#123;
+    代码块2
+&#125;
+...
+else &#123;
+    代码块n
+&#125;</code></pre>
+<h3 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h3><p>当需要对选项进行等值判断时，使用 switch 语句更加简洁明了。</p>
+<p>语法：</p>
+<pre><code>switch(表达式)&#123;
+    case 值1:
+        代码块1
+        break;
+    case 值2:
+        代码块2
+        break;
+    ...
+    default:
+        默认执行的代码块
+&#125;</code></pre>
+<p>当 switch 后表达式的值和 case 语句后的值相同时，从该位置开始向下执行，直到遇到 break 语句或者 switch 语句块结束；如果没有匹配的 case 语句则执行 default 块的代码。</p>
+<p>defualt 块不是必须的，默认为空</p>
+<h3 id="while语句"><a href="#while语句" class="headerlink" title="while语句"></a>while语句</h3><p>while语法：</p>
+<pre><code>while(条件)&#123;
+    代码块
+&#125;</code></pre>
+<p>while 的执行过程是先判断，再执行。</p>
+<p>判断 while 后面的条件是否成立 ( true or false )<br>当条件成立时，执行循环内的代码。</p>
+<h3 id="do-while语句"><a href="#do-while语句" class="headerlink" title="do-while语句"></a>do-while语句</h3><p>do-while 语法：</p>
+<pre><code>do&#123;
+    代码块
+&#125;while(条件);</code></pre>
+<p>do-while 的执行过程是先执行一次，再循环判断 <strong>（所以循环内的代码至少会执行一次）</strong> 。</p>
+<p>先执行一遍循环操作，然后判断循环条件是否成立。<br>如果条件成立，继续执行，直到循环条件不成立为止。</p>
+<h3 id="for语句"><a href="#for语句" class="headerlink" title="for语句"></a>for语句</h3><p>for 语法：</p>
+<pre><code>for(循环变量初始化①; 循环条件②; 循环变量值操作③)&#123;
+    循环操作④
+&#125;</code></pre>
+<p>for 相比 while 和 do-while 语句结构更加简洁易读，它的执行顺序：</p>
+<ul>
+<li><p>执行循环变量初始化部分（1），设置循环的初始状态，此部分在整个循环中只执行一次。</p>
+</li>
+<li><p>进行循环条件的判断（2），如果条件为 true，则执行循环体内代码（4）；如果为 false ，则直接退出循环。</p>
+</li>
+<li><p>执行循环变量值操作部分（3），对循环变量的值进行修改，然后进行下一次循环条件判断（2）。<br>整个循环的流程可以简化为：</p>
+</li>
+</ul>
+<p>(1) -&gt; [(2)-&gt;(4)-&gt;(3)] -&gt; [(2)-&gt;(4)-&gt;(3)] -&gt; … =&gt; (2) 结果为 false, 退出循环。</p>
+<h3 id="跳转语句"><a href="#跳转语句" class="headerlink" title="跳转语句"></a>跳转语句</h3><p><strong>break</strong> 关键字经常用在条件和循环语句中，用来跳出循环语句。</p>
+<p><strong>continue</strong> 关键字的作用是跳过循环体中剩余的语句执行下一次循环。</p>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p>语法：</p>
+<pre><code>数据类型[ ] 数组名;   //或者: 数据类型 数组名[ ];</code></pre>
+<p>数组名为任意合法的变量名，如：</p>
+<pre><code>int ages[];      //存放年龄的数组，类型为整型
+char symbol[];   //存放符号的数组，类型为字符型
+String [] name;  //存放名称的数组，类型为字符串型</code></pre>
+<p>声明数组后，需要为数组分配空间，也就是定义多大的数组。</p>
+<p>语法：</p>
+<pre><code>数组名 = new  数据类型 [ 数组长度 ];</code></pre>
+<p>数组长度就是数组最多可存放元素的个数。可以在数组声明的时候初始化数组，或者在声明时就为它分配好空间，这样就不用再为数组分配空间。</p>
+<p>语法：</p>
+<pre><code>int[] ages = &#123;12,18,9,33,45,60&#125;; //声明并初始化了一个整型数组，它有6个元素
+char[] symbol = new char[10] //声明并分配了一个长度为10的char型数组</code></pre>
+<p>分配空间后就可以向数组中放数据了，数组中元素都是通过下标来访问的。 如：</p>
+<pre><code>ages[0]=12;</code></pre>
+<p>Java 中可以将一个数组赋值给另一个数组，如：</p>
+<pre><code>int [] a1 = &#123;1,2,3&#125;;
+int [] a2;
+a2 = a1;</code></pre>
+<p>这里只是复制了一个引用，即 a2 和 a1 是相同数组的不同名称。a2的值变化，a1的值也会变</p>
+<p><strong>数组遍历：</strong></p>
+<pre><code>int [] ages = &#123;12, 18, 9, 33, 45, 60&#125;;
+for(int i = 0; i &lt; ages.length; i++)&#123; //ages.length是获取数组的长度
+    System.out.println(&quot;数组中第&quot;+(i+1)+&quot;个元素是 &quot;+ages[i]); //数组下标是从零开始，一定要注意
+&#125;</code></pre>
+<p>注意：</p>
+<ul>
+<li>数组下标从 0 开始。所以数组的下标范围是 0 至 数组长度 -1。</li>
+<li>数组不能越界访问，否则会报错。</li>
+</ul>
+<p>for 语句在数组内可以使用特殊简化版本，在遍历数组、集合时，foreach 更简单便捷。从英文字面意思理解 foreach 也就是“ for 每一个”的意思。</p>
+<p>语法：</p>
+<pre><code>for(元素类型 元素变量:遍历对象)&#123;
+    执行的代码
+&#125;</code></pre>
+<h3 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h3><p>语法：</p>
+<pre><code>数据类型 [][] 数组名 = new 数据类型[行的个数][列的个数];
+
+//或者
+数据类型 [][] 数组名;
+数组名 = new 数据类型[行的个数][列的个数];
+
+//也可以
+数据类型 [][] 数组名 = &#123;
+
+&#123;第一行值1,第一行值2,...&#125;
+&#123;第二行值1,第二行值2,...&#125;
+...
+&#125;</code></pre>
+<p>二维数组的赋值和访问，跟一维数组类似，可以通过下标来逐个赋值和访问，注意索引从 0 开始</p>
+<pre><code>数组名[行的索引][列的索引] = 值;</code></pre>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>类的定义：</p>
+<ul>
+<li>类是相同或相似对象的一种抽象，是对象的一个模板，它描述一类对象的行为和状态。</li>
+<li>类是具有相同属性和方法（行为）的对象的集合</li>
+</ul>
+<p>类就是对象的抽象（或者模板），对象就是类的具体（或者实例）。</p>
+<p>类由属性和方法两部分组成。</p>
+<p><strong>定义一个类</strong> ，主要有三个步骤：</p>
+<ul>
+<li><p>定义类名，用于区分不同的类。如下代码中 public class 后面跟的就是类名。class是声明类的关键字，类名后面跟上大括号，大括号里面就是类的一些信息。public 为权限修饰符。</p>
+<pre><code>  public class 类名 &#123;
+      //定义属性部分（成员变量）
+      属性1的类型 属性1;
+      属性2的类型 属性2;
+      ...
+      //定义方法部分
+      方法1
+      方法2
+      ...
+  &#125;</code></pre>
+</li>
+<li><p>编写类的属性。对象有什么，需要通过属性来表示。属性的定义是写在类名后面的大括号里，在定义属性时，要明确属性的类型。在一个类当中可以写一个或多个属性。当然也可以不定义属性。</p>
+</li>
+<li><p>编写类的方法。方法也是写在大括号里面。可以定义一个方法或多个方法，当然也可以不定义方法。</p>
+</li>
+</ul>
+<p>一个类可以包含以下<strong>类型变量</strong> ：</p>
+<ul>
+<li>局部变量：在方法、构造方法或者语句块中定义的变量被称为局部变量。变量声明和初始化都是在方法中，方法结束后，变量就会自动销毁。</li>
+<li>成员变量：成员变量是定义在类中，方法体之外的变量。这种变量在创建对象的时候实例化。成员变量可以被类中方法、构造方法和特定类的语句块访问。</li>
+<li>类变量：也叫静态变量，类变量也声明在类中，方法体之外，但必须声明为 static 类型。</li>
+</ul>
+<p>注：在使用时注意，成员变量可以被本类的所有方法所使用，同时可以被与本类有关的其他类所使用。而局部变量只能在当前的方法中使用。</p>
+<p><strong>作用域</strong></p>
+<p>作用域可以简单地理解为变量的生存期或者作用范围，也就是变量从定义开始到什么时候消亡。</p>
+<ul>
+<li><p>局部变量的作用域仅限于定义它的方法内。而成员变量的作用域在整个类内部都是可见的。</p>
+</li>
+<li><p>同时在相同的方法中，不能有同名的局部变量；在不同的方法中，可以有同名的局部变量。</p>
+</li>
+<li><p>成员变量和局部变量同名时，局部变量具有更高的优先级。 </p>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>创建对象的语法如下：</p>
+<p>  类名 对象名 = new 类名();</p>
+</li>
+</ul>
+<p>定义类的时候不会为类开辟内存空间，但是一旦创建了对象，系统就会在内存中为对象开辟一块空间，用来存放对象的属性值和方法。</p>
+<p>创建对象后，我们就要使用对象了，使用对象无非就是对属性和方法进行操作和调用。</p>
+<p>语法如下：</p>
+<pre><code>    //引用对象属性
+
+    对象名.属性
+
+    //引用对象方法
+    对象名.方法</code></pre>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>在面向对象中有一个非常重要的知识点，就是构造方法。每个类都有构造方法，在创建该类的对象的时候他们将被调用，如果没有定义构造方法，Java 编译器会提供一个默认构造方法。 创建一个对象的时候，至少调用一个构造方法。比如在新建一个对象 new Object()，括号中没有任何参数，代表调用一个无参构造方法（默认构造方法就是一个无参构造方法）。构造方法的名称必须与类名相同，一个类可以定义多个构造方法。</p>
+<p>构造方法的具体内容：</p>
+<ul>
+<li><p>构造方法的名称与类名相同，且没有返回值。它的语法格式如下：</p>
+<pre><code>  //与类同名，可以指定参数，没有返回值
+  public 构造方法名()&#123;
+  //初始化代码
+  &#125;</code></pre>
+<p>  下面是一个构造方法的例子：</p>
+<pre><code>  public class People&#123;
+      //无参构造方法
+      public People()&#123;
+
+      &#125;
+      //有一个参数的构造方法
+      public People(int age)&#123;
+
+      &#125;
+  &#125;</code></pre>
+<p>  又例如具体的构造方法：</p>
+<pre><code>  public class People &#123;
+      //属性（成员变量）有什么
+          double height;     //身高
+          int age;           //年龄
+          int sex;       //性别，0为男性，非0为女性
+
+      //构造方法，初始化了所有属性
+      public People(double h, int a, int s)&#123;
+          height = h;
+          age = a;
+          sex = s;
+      &#125;
+  &#125;</code></pre>
+<p>  //创建对象，调用我们自己定义的有参构造方法<br>  People XiaoMing = new People(168, 21, 1);</p>
+<p>  上面的例子中通过 new 关键字将类实例化成对象，而 new 后面跟的就是构造方法。于是可以知道 <strong>new + 构造方法</strong> 可以创建一个新的对象。</p>
+</li>
+<li><p>如果在定义类的时候没有写构造方法，系统会默认生成一个无参构造方法，这个构造方法什么也不会做。</p>
+</li>
+<li><p>当有指定的构造方法时，系统不会再添加无参构造方法了。</p>
+</li>
+<li><p>构造方法的重载：<strong>方法名相同，但参数不同</strong> 的多个方法，调用时会自动根据不同的参数选择相应的方法。</p>
+</li>
+</ul>
+<h3 id="static"><a href="#static" class="headerlink" title="static"></a>static</h3><h4 id="静态成员"><a href="#静态成员" class="headerlink" title="静态成员"></a>静态成员</h4><p>Java 中被 static 修饰的成员称为静态成员或类成员。它属于整个类所有，而不是某个对象所有，即被类的所有对象所共享。静态成员可以使用类名直接访问，也可以使用对象名进行访问。</p>
+<h4 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h4><p>被 static 修饰的方法是静态方法，静态方法不依赖于对象，不需要将类实例化便可以调用，由于不实例化也可以调用，所以不能有 this，也不能访问非静态成员变量和非静态方法。但是非静态成员变量和非静态方法可以访问静态方法。</p>
+<h3 id="final"><a href="#final" class="headerlink" title="final"></a>final</h3><p>final 关键字可以修饰类、方法、属性和变量</p>
+<ul>
+<li>final 修饰类，则该类不允许被继承，为最终类</li>
+<li>final 修饰方法，则该方法不允许被覆盖（重写）</li>
+<li>final 修饰属性：则该类的属性不会进行隐式的初始化（类的初始化属性必须有值）或在构造方法中赋值（但只能选其一）</li>
+<li>final 修饰变量，则该变量的值只能赋一次值，即常量</li>
+</ul>
+<h3 id="权限修饰符"><a href="#权限修饰符" class="headerlink" title="权限修饰符"></a>权限修饰符</h3><p>权限修饰符可以用来修饰属性和方法的访问范围。</p>
+<p>访问范围<br><img src="https://doc.shiyanlou.com/document-uid79144labid1072timestamp1434941168916.png"></p>
+<p>默认 是什么修饰符都不加，默认在当前类中和同一包下都可以访问和使用。</p>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p>封装，即隐藏对象的属性和实现细节，仅对外公开接口，控制在程序中属性的读和修改的访问级别</p>
+<ul>
+<li>只能通过规定的方法访问数据。</li>
+<li>隐藏类的实例细节，方便修改和实现。</li>
+</ul>
+<p>如何去实现类的封装呢？</p>
+<ul>
+<li>修改属性的可见性，在属性的前面添加修饰符 (private)</li>
+<li>对每个值属性提供对外的公共方法访问，如创建 getter/setter（取值和赋值）方法，用于对私有属性的访问</li>
+<li>在 getter/setter 方法里加入属性的控制语句，例如我们可以加一个判断语句，对于非法输入给予否定。</li>
+</ul>
+<p>封装的步骤</p>
+<p>如果我们没有在属性前面添加任何修饰符，我们通过对象就可以直接对属性值进行修改，没有体现封装的特性。这在许多程序设计中都是不安全的，所以我们需要利用封装，来改进我们的代码。</p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2021/03/05/%E5%A4%A7%E4%BA%8C%E4%B8%8B%E5%AD%A6%E6%9C%9F%E5%BC%80%E5%A7%8B/"><span class="paginator-prev__text">大二下学期开始啦</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8F%9C%E9%B8%A1%E7%9A%84java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85"><span class="toc-number">1.</span> <span class="toc-text">菜鸡的java学习之旅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">2.</span> <span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-number">2.1.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B4%E6%95%B0"><span class="toc-number">2.2.1.</span> <span class="toc-text">整数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="toc-number">2.2.2.</span> <span class="toc-text">浮点数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#char-%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.3.</span> <span class="toc-text">char 类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#boolean-%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.4.</span> <span class="toc-text">boolean 类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#String"><span class="toc-number">2.2.5.</span> <span class="toc-text">String</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%95%BF%E5%BA%A6"><span class="toc-number">2.2.5.1.</span> <span class="toc-text">计算字符串长度</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83"><span class="toc-number">2.2.5.2.</span> <span class="toc-text">字符串比较</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.2.5.3.</span> <span class="toc-text">字符串连接</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.3.</span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.3.1.</span> <span class="toc-text">算术运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.3.2.</span> <span class="toc-text">位运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.3.3.</span> <span class="toc-text">逻辑运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.3.4.</span> <span class="toc-text">关系运算符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">2.4.</span> <span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">2.5.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if%E8%AF%AD%E5%8F%A5"><span class="toc-number">2.6.</span> <span class="toc-text">if语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#switch%E8%AF%AD%E5%8F%A5"><span class="toc-number">2.7.</span> <span class="toc-text">switch语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#while%E8%AF%AD%E5%8F%A5"><span class="toc-number">2.8.</span> <span class="toc-text">while语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#do-while%E8%AF%AD%E5%8F%A5"><span class="toc-number">2.9.</span> <span class="toc-text">do-while语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for%E8%AF%AD%E5%8F%A5"><span class="toc-number">2.10.</span> <span class="toc-text">for语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%B3%E8%BD%AC%E8%AF%AD%E5%8F%A5"><span class="toc-number">2.11.</span> <span class="toc-text">跳转语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">2.12.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">2.13.</span> <span class="toc-text">二维数组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">3.</span> <span class="toc-text">面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">3.1.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-number">3.2.</span> <span class="toc-text">对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="toc-number">3.3.</span> <span class="toc-text">构造方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#static"><span class="toc-number">3.4.</span> <span class="toc-text">static</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%88%90%E5%91%98"><span class="toc-number">3.4.1.</span> <span class="toc-text">静态成员</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-number">3.4.2.</span> <span class="toc-text">静态方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#final"><span class="toc-number">3.5.</span> <span class="toc-text">final</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%83%E9%99%90%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">3.6.</span> <span class="toc-text">权限修饰符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85"><span class="toc-number">3.7.</span> <span class="toc-text">封装</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/yuhangyuan.svg" alt="avatar"></div><p class="sidebar-ov-author__text">今天你学习了吗？</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">7</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">分类</div></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>laoyu</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.2.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
   var GUEST_INFO = ['nick', 'mail', 'link'];
   var guest_info = 'nick,mail,link';
 
@@ -218,9 +373,9 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.2.0"><lin
     avatar: 'mp',
     meta: guest_info,
     pageSize: '10' || 10,
-    visitor: true,
+    visitor: false,
     recordIP: false,
-    lang: 'zh-cn, en' || 'zh-cn',
+    lang: '' || 'zh-cn',
     path: window.location.pathname
   });
 }
