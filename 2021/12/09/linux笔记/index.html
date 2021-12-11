@@ -1,0 +1,594 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/2.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/2.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="linux学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python">
+<meta property="og:url" content="http://example.com/2021/12/09/linux%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Laoyu&#39;blog">
+<meta property="og:description" content="linux学习笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2021/12/09/kH1lvsnhu9F5zrE.png">
+<meta property="article:published_time" content="2021-12-09T12:19:09.370Z">
+<meta property="article:modified_time" content="2021-12-11T08:14:27.526Z">
+<meta property="article:author" content="laoyu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2021/12/09/kH1lvsnhu9F5zrE.png"><title>python | Laoyu'blog</title><link ref="canonical" href="http://example.com/2021/12/09/linux%E7%AC%94%E8%AE%B0/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":true},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Laoyu'blog" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Laoyu'blog</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">python</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2021-12-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2021-12-11</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">2.5k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">15分</span></span></div></header><div class="post-body"><p>linux学习笔记</p>
+<a id="more"></a>
+
+
+
+
+        <h1 id="vi和vim编辑器"   >
+          <a href="#vi和vim编辑器" class="heading-link"><i class="fas fa-link"></i></a>vi和vim编辑器</h1>
+      <ul>
+<li>vi 文本编辑器</li>
+<li>vim 增强版vi，具有程序编程能力等。</li>
+</ul>
+
+        <h2 id="三种模式"   >
+          <a href="#三种模式" class="heading-link"><i class="fas fa-link"></i></a>三种模式</h2>
+      
+        <h3 id="命令模式"   >
+          <a href="#命令模式" class="heading-link"><i class="fas fa-link"></i></a>命令模式</h3>
+      <p>刚启动vim，就进入命令模式。<br>此时敲下键盘被vim识别为命令</p>
+<p> <strong>常用命令：</strong></p>
+<p><strong>切换模式</strong></p>
+<ul>
+<li><code>i</code> 切换到输入模式，以输入字符。</li>
+<li><code>:</code> 切换到底线命令模式，以在最底一行输入命令。</li>
+</ul>
+<p><strong>移动光标</strong></p>
+<ul>
+<li><code>nG</code>    n 为数字。移动到这个档案的第 n 行。例如 20G 则会移动到这个档案的第 20 行(可配合 :set nu)</li>
+<li><code>gg</code>    移动到这个档案的第一行，相当于 1G 啊！</li>
+<li><code>n&lt;Enter&gt;</code>    n 为数字。光标向下移动 n 行</li>
+</ul>
+<p><strong>搜索替换</strong></p>
+<ul>
+<li><code>/word</code>    向光标之下寻找一个名称为 word 的字符串。例如要在档案内搜寻 vbird 这个字符串，就输入 /vbird 即可！ (常用)</li>
+<li><code>?word</code>    向光标之上寻找一个字符串名称为 word 的字符串。</li>
+<li><code>n</code>    向上寻找</li>
+<li><code>N</code>     向下寻找</li>
+</ul>
+<p><strong>删除</strong></p>
+<ul>
+<li><code>nx</code>    n 为数字，连续向后删除 n 个字符。</li>
+<li><code>dd</code>    删除游标所在的那一整行</li>
+<li><code>ndd</code>    n 为数字。删除光标所在的向下 n 行</li>
+<li><code>d1G</code>    删除光标所在到第一行的所有数据</li>
+<li><code>dG</code>    删除光标所在到最后一行的所有数据</li>
+</ul>
+<p><strong>复制</strong></p>
+<ul>
+<li><code>yy</code>    复制游标所在的那一行</li>
+<li><code>nyy</code>    n 为数字。复制光标所在的向下 n 行</li>
+<li><code>y1G</code>    复制游标所在行到第一行的所有数据</li>
+<li><code>yG</code>    复制游标所在行到最后一行的所有数据</li>
+</ul>
+<p><strong>粘贴</strong></p>
+<ul>
+<li><code>p, P</code>    <strong>p</strong> 为将已复制的数据在光标下一行贴上，<strong>P</strong> 则为贴在游标上一行！</li>
+<li><code>J</code>    将光标所在行与下一行的数据结合成同一行</li>
+<li><code>u</code>    复原前一个动作。</li>
+<li>[Ctrl]+r    重做上一个动作。</li>
+</ul>
+
+        <h3 id="插入模式"   >
+          <a href="#插入模式" class="heading-link"><i class="fas fa-link"></i></a>插入模式</h3>
+      <p>在命令模式下按下i就进入了输入模式。</p>
+<p><strong>ESC，退出输入模式，切换到命令模式</strong></p>
+
+        <h3 id="底行命令模式"   >
+          <a href="#底行命令模式" class="heading-link"><i class="fas fa-link"></i></a>底行命令模式</h3>
+      <p>在命令模式下按下 <strong>:（英文冒号）</strong> 就进入了底线命令模式。</p>
+<p>底线命令模式可以输入单个或多个字符的命令，可用的命令非常多。</p>
+<p>在底行命令模式中，基本的命令有：</p>
+<ul>
+<li><code>:q</code>  &nbsp;&nbsp;&nbsp;退出程序</li>
+<li><code>:q!</code>    &nbsp;&nbsp;使用 ! 为强制离开不储存。</li>
+<li><code>:w</code> &nbsp;&nbsp;&nbsp;保存文件</li>
+<li><code>:wq</code>    &nbsp;&nbsp;储存后离开，若为 :wq! 则为强制储存后离开</li>
+<li><code>:! command</code>    暂时离开 vi 到指令行模式下执行 command 的显示结果！例如<br>『:! ls /home』即可在 vi 当中察看 /home 底下以 ls 输出的档案信息！</li>
+</ul>
+<p>按ESC键可随时退出底线命令模式。</p>
+
+        <h3 id="行号"   >
+          <a href="#行号" class="heading-link"><i class="fas fa-link"></i></a>行号</h3>
+      <p>在底行模式下：</p>
+<ul>
+<li><code>:set nu</code>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br> 显示行号，设定之后，会在每一行的前缀显示该行的行号</li>
+<li><code>:set nonu</code>    &nbsp;&nbsp; 与 set nu 相反，为取消行号！</li>
+</ul>
+
+        <h3 id="三种模式的转换"   >
+          <a href="#三种模式的转换" class="heading-link"><i class="fas fa-link"></i></a>三种模式的转换</h3>
+      <p><img src="https://s2.loli.net/2021/12/09/kH1lvsnhu9F5zrE.png" alt="image.png"></p>
+
+        <h1 id="关机和重启"   >
+          <a href="#关机和重启" class="heading-link"><i class="fas fa-link"></i></a>关机和重启</h1>
+      <p><code>sync</code> 把内存的数据同步到磁盘，执行关机或重启命令前先执行此命令</p>
+
+        <h2 id="关机"   >
+          <a href="#关机" class="heading-link"><i class="fas fa-link"></i></a>关机</h2>
+      <ul>
+<li><p>shutdown</p>
+<pre><code>  shutdown -h now 立刻关机
+  shutdown -h 1   1分钟后关机</code></pre>
+</li>
+<li><p>halt</p>
+</li>
+<li><p>systemctl pweroff</p>
+</li>
+<li><p>init 0 </p>
+</li>
+</ul>
+
+        <h2 id="重启"   >
+          <a href="#重启" class="heading-link"><i class="fas fa-link"></i></a>重启</h2>
+      <ul>
+<li>reboot</li>
+<li>shutdown -r now</li>
+</ul>
+
+        <h2 id="用户登录和注销"   >
+          <a href="#用户登录和注销" class="heading-link"><i class="fas fa-link"></i></a>用户登录和注销</h2>
+      
+        <h3 id="登录"   >
+          <a href="#登录" class="heading-link"><i class="fas fa-link"></i></a>登录</h3>
+      <p><code>su username</code> 切换用户</p>
+
+        <h3 id="注销"   >
+          <a href="#注销" class="heading-link"><i class="fas fa-link"></i></a>注销</h3>
+      <p>用户离开Linux（UNIX）系统时，应进行注销（logout )操作。注销后的用户终端可提供给其他用户使用。 </p>
+<p>“注销”也通知了正在进行中的系统记账程序停止对该用户的记账工作。有多种方式完成用户注销，如：</p>
+<ul>
+<li><code>logout</code>  在命令行输入logout表示退出登录</li>
+<li><code>exit</code>  用终止当前进程执行的方式退出用户登录的进程</li>
+<li><code>Ctrl-d</code>  用退出shell主进程的方式注销用户</li>
+</ul>
+<p>用户注销后系统回到“Login”提示符下等待下一次用户的登录。通常在用户下次进行登录时，系统会提供一些报告给用户查阅，例如用户最近一次注册的时间和使用的终端信息。</p>
+
+        <h1 id="用户管理"   >
+          <a href="#用户管理" class="heading-link"><i class="fas fa-link"></i></a>用户管理</h1>
+      
+        <h2 id="用户"   >
+          <a href="#用户" class="heading-link"><i class="fas fa-link"></i></a>用户</h2>
+      
+        <h3 id="添加用户"   >
+          <a href="#添加用户" class="heading-link"><i class="fas fa-link"></i></a>添加用户</h3>
+      <pre><code>useradd username</code></pre>
+<p>注：</p>
+<ul>
+<li><p>用户创建成功后，会自动创建和用户同名的家目录 /home/username</p>
+</li>
+<li><p>useradd -d dir username   给新创建的用户指定家目录</p>
+</li>
+</ul>
+
+        <h3 id="修改口令"   >
+          <a href="#修改口令" class="heading-link"><i class="fas fa-link"></i></a>修改口令</h3>
+      <pre><code>passwd username</code></pre>
+
+        <h3 id="删除用户"   >
+          <a href="#删除用户" class="heading-link"><i class="fas fa-link"></i></a>删除用户</h3>
+      <pre><code>userdel username（保留家目录）
+userdel -r username(同时删除家目录)</code></pre>
+
+        <h3 id="修改用户名"   >
+          <a href="#修改用户名" class="heading-link"><i class="fas fa-link"></i></a>修改用户名</h3>
+      <pre><code>usermod -l new-name old-name</code></pre>
+
+        <h3 id="锁定用户使其不能登录"   >
+          <a href="#锁定用户使其不能登录" class="heading-link"><i class="fas fa-link"></i></a>锁定用户使其不能登录</h3>
+      <pre><code>usermod -L username</code></pre>
+
+        <h3 id="查询用户信息指令"   >
+          <a href="#查询用户信息指令" class="heading-link"><i class="fas fa-link"></i></a>查询用户信息指令</h3>
+      
+        <h4 id="基本语法"   >
+          <a href="#基本语法" class="heading-link"><i class="fas fa-link"></i></a>基本语法</h4>
+      <pre><code>id username </code></pre>
+
+        <h3 id="切换用户"   >
+          <a href="#切换用户" class="heading-link"><i class="fas fa-link"></i></a>切换用户</h3>
+      <pre><code>su username</code></pre>
+
+        <h3 id="查看当前用户-登录用户"   >
+          <a href="#查看当前用户-登录用户" class="heading-link"><i class="fas fa-link"></i></a>查看当前用户/登录用户</h3>
+      <pre><code>whoami
+who am i</code></pre>
+
+        <h2 id="用户组"   >
+          <a href="#用户组" class="heading-link"><i class="fas fa-link"></i></a>用户组</h2>
+      
+        <h3 id="新增组"   >
+          <a href="#新增组" class="heading-link"><i class="fas fa-link"></i></a>新增组</h3>
+      <pre><code>groupadd groupname</code></pre>
+
+        <h3 id="删除组"   >
+          <a href="#删除组" class="heading-link"><i class="fas fa-link"></i></a>删除组</h3>
+      <pre><code>groupdel groupname</code></pre>
+
+        <h3 id="修改用户的组"   >
+          <a href="#修改用户的组" class="heading-link"><i class="fas fa-link"></i></a>修改用户的组</h3>
+      <pre><code>usermod -g groupname username</code></pre>
+
+        <h2 id="用户和组相关文件"   >
+          <a href="#用户和组相关文件" class="heading-link"><i class="fas fa-link"></i></a>用户和组相关文件</h2>
+      
+        <h3 id="etc-passwd-文件"   >
+          <a href="#etc-passwd-文件" class="heading-link"><i class="fas fa-link"></i></a>/etc/passwd 文件</h3>
+      <p><strong>用户</strong>的配置文件，记录用户的各种信息</p>
+<p>每行的含义：</p>
+<pre><code>    用户名：口令：用户标识号：组标识号：注释行描叙：主目录：登录shell</code></pre>
+
+        <h3 id="etc-shadow-文件"   >
+          <a href="#etc-shadow-文件" class="heading-link"><i class="fas fa-link"></i></a>/etc/shadow 文件</h3>
+      <p><strong>组</strong>的配置文件，记录linux包含的组的信息</p>
+<p>每行的意义：</p>
+<pre><code>    组名：口令：组标识号：组内用户列表</code></pre>
+
+        <h1 id="实用指令"   >
+          <a href="#实用指令" class="heading-link"><i class="fas fa-link"></i></a>实用指令</h1>
+      
+        <h2 id="指定运行级别"   >
+          <a href="#指定运行级别" class="heading-link"><i class="fas fa-link"></i></a>指定运行级别</h2>
+      
+        <h3 id="运行级别说明"   >
+          <a href="#运行级别说明" class="heading-link"><i class="fas fa-link"></i></a>运行级别说明</h3>
+      <ul>
+<li>0 ： 关机</li>
+<li>1 ： 单用户（找回丢失密码）</li>
+<li>2 ： 多用户状态没有网络服务</li>
+<li>3 ： 多用户状态有网络服务</li>
+<li>4 ： 系统未使用保留给用户</li>
+<li>5 ： 图形界面</li>
+<li>6 ： 系统重启</li>
+</ul>
+
+        <h2 id="帮助指令"   >
+          <a href="#帮助指令" class="heading-link"><i class="fas fa-link"></i></a>帮助指令</h2>
+      
+        <h3 id="man-获得帮助信息"   >
+          <a href="#man-获得帮助信息" class="heading-link"><i class="fas fa-link"></i></a>man - 获得帮助信息</h3>
+      <pre><code>man 命令或配置文件</code></pre>
+
+        <h3 id="help-指令"   >
+          <a href="#help-指令" class="heading-link"><i class="fas fa-link"></i></a>help 指令</h3>
+      <p>获得shell内置命令的帮助信息</p>
+<pre><code>help 命令</code></pre>
+
+        <h2 id="文件目录类"   >
+          <a href="#文件目录类" class="heading-link"><i class="fas fa-link"></i></a>文件目录类</h2>
+      
+        <h3 id="pwd"   >
+          <a href="#pwd" class="heading-link"><i class="fas fa-link"></i></a>pwd</h3>
+      <p>显示当前工作目录的绝对路径</p>
+
+        <h3 id="ls"   >
+          <a href="#ls" class="heading-link"><i class="fas fa-link"></i></a>ls</h3>
+      <pre><code>ls [选项] [目录或是文件]</code></pre>
+<p>常用选项：</p>
+<ul>
+<li>-a：显示当前目录所有的文件和目录，包括隐藏的</li>
+<li>-l：  以列表的方式显示信息</li>
+</ul>
+
+        <h3 id="cd"   >
+          <a href="#cd" class="heading-link"><i class="fas fa-link"></i></a>cd</h3>
+      <p>切换到指定目录</p>
+<pre><code>cd~ / cd  : 回到自己的家目录
+cd.. : 回到当前工作目录的上一级目录</code></pre>
+
+        <h3 id="mkdir"   >
+          <a href="#mkdir" class="heading-link"><i class="fas fa-link"></i></a>mkdir</h3>
+      <p>创建目录</p>
+<p><code>-p</code>：创建多级目录</p>
+
+        <h3 id="rmdir"   >
+          <a href="#rmdir" class="heading-link"><i class="fas fa-link"></i></a>rmdir</h3>
+      <p>删除空目录，目录下有内容时无法删除</p>
+
+        <h3 id="touch"   >
+          <a href="#touch" class="heading-link"><i class="fas fa-link"></i></a>touch</h3>
+      <p>创建空文件</p>
+
+        <h3 id="cp"   >
+          <a href="#cp" class="heading-link"><i class="fas fa-link"></i></a>cp</h3>
+      <p>拷贝文件到指定目录</p>
+<pre><code>cp [选项] source(源路径) dest(目标路径)</code></pre>
+<p><code>-r</code>：递归复制整个文件夹</p>
+
+        <h3 id="mv"   >
+          <a href="#mv" class="heading-link"><i class="fas fa-link"></i></a>mv</h3>
+      <p>移动文件</p>
+<pre><code>mv oldNameFiel newNameFile</code></pre>
+
+        <h3 id="rm"   >
+          <a href="#rm" class="heading-link"><i class="fas fa-link"></i></a>rm</h3>
+      <p>移除文件或目录</p>
+<pre><code>rm [选项] 要删除的文件或目录</code></pre>
+<p><strong>常用选项</strong><br><code>-r</code>：递归删除整个文件夹<br><code>-f</code>：强制删除不提示</p>
+
+        <h3 id="cat"   >
+          <a href="#cat" class="heading-link"><i class="fas fa-link"></i></a>cat</h3>
+      <p>查看文件内容</p>
+<p><code>-n</code>：显示行号</p>
+
+        <h3 id="more"   >
+          <a href="#more" class="heading-link"><i class="fas fa-link"></i></a>more</h3>
+      <p>基于vi编辑器的文本过滤器，以全屏幕方式按页显示文本文件内容</p>
+<p><strong>常用操作</strong></p>
+<ul>
+<li><code>Enter</code> 向下n行，需要定义。默认为1行</li>
+<li><code>空格键</code> 向下滚动一屏</li>
+<li><code>Ctrl+B</code> 返回上一屏</li>
+<li><code>=</code>  输出当前行的行号</li>
+<li><code>:f</code> 输出文件名和当前行的行号</li>
+<li><code>V</code> 调用vi编辑器</li>
+<li><code>!</code>命令 调用Shell，并执行命令</li>
+<li><code>q</code> 退出more</li>
+</ul>
+
+        <h3 id="less"   >
+          <a href="#less" class="heading-link"><i class="fas fa-link"></i></a>less</h3>
+      <p>与more相似，适合查看大型文件</p>
+
+        <h3 id="echo"   >
+          <a href="#echo" class="heading-link"><i class="fas fa-link"></i></a>echo</h3>
+      <p>输出内容到控制台</p>
+<pre><code>echo [选项] [输出内容]</code></pre>
+
+        <h3 id="head"   >
+          <a href="#head" class="heading-link"><i class="fas fa-link"></i></a>head</h3>
+      <p>显示文件开头部分，默认显示前10行</p>
+<p><code>head -n 5</code> 显示前5行</p>
+
+        <h3 id="tail"   >
+          <a href="#tail" class="heading-link"><i class="fas fa-link"></i></a>tail</h3>
+      <p>输出文件中尾部的内容，默认10行</p>
+<p><code>tali -n 5</code>：查看文件尾5行</p>
+<p><code>tail -f </code>：实时追踪该文档的所有更新</p>
+
+        <h3 id="gt-指令和-gt-gt-指令"   >
+          <a href="#gt-指令和-gt-gt-指令" class="heading-link"><i class="fas fa-link"></i></a>&gt;指令和&gt;&gt;指令</h3>
+      <ul>
+<li><code>&gt;</code>：输出重定向（覆盖）</li>
+<li><code>&gt;&gt;</code>：追加（文件尾）</li>
+</ul>
+<p><strong>基本语法</strong></p>
+<ul>
+<li><code>ls -l &gt; 文件</code>：列表内容写入文件中（覆盖写）</li>
+<li><code>ls -al &gt;&gt; 文件</code>：列表内容追加写入文件（文件尾处）</li>
+<li><code>cat file1 &gt; file2</code>：将文件1的内容覆盖到文件2</li>
+</ul>
+
+        <h3 id="ln"   >
+          <a href="#ln" class="heading-link"><i class="fas fa-link"></i></a>ln</h3>
+      <p>软链接也称为符号链接，存放链接其他文件的路径</p>
+<p>基本语法：<br>给源文件创建一个软链接</p>
+<pre><code>ln -s [源文件或目录] [软链接名]</code></pre>
+<p>注：当使用pwd指令查看目录时，看到的仍是软链接所在目录</p>
+
+        <h3 id="history"   >
+          <a href="#history" class="heading-link"><i class="fas fa-link"></i></a>history</h3>
+      <p>查看已经执行过的历史命令</p>
+<p><code>history n</code>：查看最近使用的n行命令<br><code>!5</code>：执行历史编号为5的命令</p>
+
+        <h2 id="时间日期类"   >
+          <a href="#时间日期类" class="heading-link"><i class="fas fa-link"></i></a>时间日期类</h2>
+      
+        <h3 id="date"   >
+          <a href="#date" class="heading-link"><i class="fas fa-link"></i></a>date</h3>
+      <p>显示当前日期</p>
+
+        <h4 id="基本语法-1"   >
+          <a href="#基本语法-1" class="heading-link"><i class="fas fa-link"></i></a>基本语法</h4>
+      <ul>
+<li><code>date + %Y</code>：显示当前年份</li>
+<li><code>date + %m</code>：显示当前月份</li>
+<li><code>date + %d</code>：显示当前是哪一天</li>
+<li><code>date &quot;%Y-%m-%d %H:%M:%S&quot;</code>：显示年月日时分秒</li>
+</ul>
+
+        <h4 id="设置系统当前时间"   >
+          <a href="#设置系统当前时间" class="heading-link"><i class="fas fa-link"></i></a>设置系统当前时间</h4>
+      <pre><code>date -s 字符串时间</code></pre>
+
+        <h3 id="cal"   >
+          <a href="#cal" class="heading-link"><i class="fas fa-link"></i></a>cal</h3>
+      <p>显示日历</p>
+
+        <h2 id="搜索查找类"   >
+          <a href="#搜索查找类" class="heading-link"><i class="fas fa-link"></i></a>搜索查找类</h2>
+      
+        <h3 id="find"   >
+          <a href="#find" class="heading-link"><i class="fas fa-link"></i></a>find</h3>
+      <p>find指令从指定目录向下递归其各个子目录，将满足条件的文件或者目录显示在终端</p>
+<p><strong>常用选项</strong></p>
+<ul>
+<li><code>-name</code>：按照指定的文件名查找模式查找文件</li>
+<li><code>-user</code>：查找属于指定用户名的所有文件</li>
+<li><code>-size</code>：按照指定文件大小查找文件</li>
+</ul>
+<p><strong>应用实例</strong></p>
+<ol>
+<li><p>按文件名：根据名称查找/home目录下的hello.txt文件</p>
+<pre><code> find /home -name hello.txt</code></pre>
+</li>
+<li><p>按拥有者：查找/opt目录下，用户名为nobody的文件</p>
+<pre><code> find /opt -user nobody</code></pre>
+</li>
+<li><p>查找整个linux系统下大于200M的文件（+n大于 -n小于 n等于，单位有K,M,G）</p>
+<pre><code> find / -size +200M</code></pre>
+</li>
+</ol>
+
+        <h3 id="grep指令和管道符号"   >
+          <a href="#grep指令和管道符号" class="heading-link"><i class="fas fa-link"></i></a>grep指令和管道符号 |</h3>
+      <ul>
+<li>grep 过滤查找</li>
+<li>管道符“**|**”，表示将前一个命令的处理结果输出传递给后面的命令处理</li>
+</ul>
+<p><strong>语法：</strong></p>
+<pre><code>grep [选项] 查找内容 源文件</code></pre>
+<p><strong>常用选项：</strong></p>
+<ul>
+<li><code>-n</code>：显示匹配行及行号</li>
+<li><code>-i</code>：忽略字母大小写</li>
+</ul>
+
+        <h2 id="压缩和解压类"   >
+          <a href="#压缩和解压类" class="heading-link"><i class="fas fa-link"></i></a>压缩和解压类</h2>
+      
+        <h3 id="gzip和gunzip"   >
+          <a href="#gzip和gunzip" class="heading-link"><i class="fas fa-link"></i></a>gzip和gunzip</h3>
+      <p>gzip用于压缩文件，gunzip用于解压文件</p>
+<p><strong>基本语法：</strong></p>
+<pre><code>gzip：压缩文件，只能将文件压缩为*.gz文件
+gunzip：解压缩文件命令</code></pre>
+
+        <h3 id="zip和unzip"   >
+          <a href="#zip和unzip" class="heading-link"><i class="fas fa-link"></i></a>zip和unzip</h3>
+      <p>zip用于压文件，unzip用于解压</p>
+<p><strong>基本语法：</strong></p>
+<pre><code>    zip &lt;-r(递归压缩，压缩目录)&gt; xx.zip 要压缩的内容
+    unzip &lt;-d 目录（指定解压后文件的存放目录）&gt; xx.zip </code></pre>
+
+        <h3 id="tar"   >
+          <a href="#tar" class="heading-link"><i class="fas fa-link"></i></a>tar</h3>
+      <p>打包指令，打包后的文件是 <strong>.tar</strong> 文件</p>
+<p><strong>基本语法：</strong></p>
+<p>打包目录，压缩后的文件格式.tar</p>
+<pre><code>tar [选项] xx.tar 打包的内容</code></pre>
+<p><strong>常用选项：</strong></p>
+<ul>
+<li><code>-c</code>：产生.tar打包文件</li>
+<li><code>-v</code>：显示详细信息</li>
+<li><code>-f</code>：指定压缩后的文件名</li>
+<li><code>-z</code>：打包同时压缩，此时产生的文件后缀名为<code>.tar.gz</code></li>
+<li><code>-x</code>：解包.tar文件</li>
+</ul>
+
+        <h1 id="组管理和权限管理"   >
+          <a href="#组管理和权限管理" class="heading-link"><i class="fas fa-link"></i></a>组管理和权限管理</h1>
+      </div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2021/11/29/python/"><span class="paginator-prev__text">python</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vi%E5%92%8Cvim%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">
+          vi和vim编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.1.</span> <span class="toc-text">
+          三种模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.1.1.</span> <span class="toc-text">
+          命令模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.1.2.</span> <span class="toc-text">
+          插入模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%95%E8%A1%8C%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.1.3.</span> <span class="toc-text">
+          底行命令模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%8F%B7"><span class="toc-number">1.1.4.</span> <span class="toc-text">
+          行号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E6%A8%A1%E5%BC%8F%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.1.5.</span> <span class="toc-text">
+          三种模式的转换</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E6%9C%BA%E5%92%8C%E9%87%8D%E5%90%AF"><span class="toc-number">2.</span> <span class="toc-text">
+          关机和重启</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E6%9C%BA"><span class="toc-number">2.1.</span> <span class="toc-text">
+          关机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%90%AF"><span class="toc-number">2.2.</span> <span class="toc-text">
+          重启</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E5%92%8C%E6%B3%A8%E9%94%80"><span class="toc-number">2.3.</span> <span class="toc-text">
+          用户登录和注销</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BB%E5%BD%95"><span class="toc-number">2.3.1.</span> <span class="toc-text">
+          登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%94%80"><span class="toc-number">2.3.2.</span> <span class="toc-text">
+          注销</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">
+          用户管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7"><span class="toc-number">3.1.</span> <span class="toc-text">
+          用户</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7"><span class="toc-number">3.1.1.</span> <span class="toc-text">
+          添加用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%8F%A3%E4%BB%A4"><span class="toc-number">3.1.2.</span> <span class="toc-text">
+          修改口令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7"><span class="toc-number">3.1.3.</span> <span class="toc-text">
+          删除用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E5%90%8D"><span class="toc-number">3.1.4.</span> <span class="toc-text">
+          修改用户名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%81%E5%AE%9A%E7%94%A8%E6%88%B7%E4%BD%BF%E5%85%B6%E4%B8%8D%E8%83%BD%E7%99%BB%E5%BD%95"><span class="toc-number">3.1.5.</span> <span class="toc-text">
+          锁定用户使其不能登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E6%8C%87%E4%BB%A4"><span class="toc-number">3.1.6.</span> <span class="toc-text">
+          查询用户信息指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">3.1.6.1.</span> <span class="toc-text">
+          基本语法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7"><span class="toc-number">3.1.7.</span> <span class="toc-text">
+          切换用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7-%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7"><span class="toc-number">3.1.8.</span> <span class="toc-text">
+          查看当前用户&#x2F;登录用户</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%BB%84"><span class="toc-number">3.2.</span> <span class="toc-text">
+          用户组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E7%BB%84"><span class="toc-number">3.2.1.</span> <span class="toc-text">
+          新增组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%BB%84"><span class="toc-number">3.2.2.</span> <span class="toc-text">
+          删除组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E7%9A%84%E7%BB%84"><span class="toc-number">3.2.3.</span> <span class="toc-text">
+          修改用户的组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%92%8C%E7%BB%84%E7%9B%B8%E5%85%B3%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.</span> <span class="toc-text">
+          用户和组相关文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#etc-passwd-%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.1.</span> <span class="toc-text">
+          &#x2F;etc&#x2F;passwd 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#etc-shadow-%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.2.</span> <span class="toc-text">
+          &#x2F;etc&#x2F;shadow 文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text">
+          实用指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E5%AE%9A%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB"><span class="toc-number">4.1.</span> <span class="toc-text">
+          指定运行级别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB%E8%AF%B4%E6%98%8E"><span class="toc-number">4.1.1.</span> <span class="toc-text">
+          运行级别说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A9%E6%8C%87%E4%BB%A4"><span class="toc-number">4.2.</span> <span class="toc-text">
+          帮助指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#man-%E8%8E%B7%E5%BE%97%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF"><span class="toc-number">4.2.1.</span> <span class="toc-text">
+          man - 获得帮助信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#help-%E6%8C%87%E4%BB%A4"><span class="toc-number">4.2.2.</span> <span class="toc-text">
+          help 指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%B1%BB"><span class="toc-number">4.3.</span> <span class="toc-text">
+          文件目录类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pwd"><span class="toc-number">4.3.1.</span> <span class="toc-text">
+          pwd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ls"><span class="toc-number">4.3.2.</span> <span class="toc-text">
+          ls</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cd"><span class="toc-number">4.3.3.</span> <span class="toc-text">
+          cd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mkdir"><span class="toc-number">4.3.4.</span> <span class="toc-text">
+          mkdir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rmdir"><span class="toc-number">4.3.5.</span> <span class="toc-text">
+          rmdir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#touch"><span class="toc-number">4.3.6.</span> <span class="toc-text">
+          touch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cp"><span class="toc-number">4.3.7.</span> <span class="toc-text">
+          cp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mv"><span class="toc-number">4.3.8.</span> <span class="toc-text">
+          mv</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rm"><span class="toc-number">4.3.9.</span> <span class="toc-text">
+          rm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cat"><span class="toc-number">4.3.10.</span> <span class="toc-text">
+          cat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#more"><span class="toc-number">4.3.11.</span> <span class="toc-text">
+          more</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#less"><span class="toc-number">4.3.12.</span> <span class="toc-text">
+          less</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#echo"><span class="toc-number">4.3.13.</span> <span class="toc-text">
+          echo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#head"><span class="toc-number">4.3.14.</span> <span class="toc-text">
+          head</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tail"><span class="toc-number">4.3.15.</span> <span class="toc-text">
+          tail</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gt-%E6%8C%87%E4%BB%A4%E5%92%8C-gt-gt-%E6%8C%87%E4%BB%A4"><span class="toc-number">4.3.16.</span> <span class="toc-text">
+          &gt;指令和&gt;&gt;指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ln"><span class="toc-number">4.3.17.</span> <span class="toc-text">
+          ln</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#history"><span class="toc-number">4.3.18.</span> <span class="toc-text">
+          history</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9F%E7%B1%BB"><span class="toc-number">4.4.</span> <span class="toc-text">
+          时间日期类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#date"><span class="toc-number">4.4.1.</span> <span class="toc-text">
+          date</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95-1"><span class="toc-number">4.4.1.1.</span> <span class="toc-text">
+          基本语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E7%B3%BB%E7%BB%9F%E5%BD%93%E5%89%8D%E6%97%B6%E9%97%B4"><span class="toc-number">4.4.1.2.</span> <span class="toc-text">
+          设置系统当前时间</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cal"><span class="toc-number">4.4.2.</span> <span class="toc-text">
+          cal</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E6%9F%A5%E6%89%BE%E7%B1%BB"><span class="toc-number">4.5.</span> <span class="toc-text">
+          搜索查找类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#find"><span class="toc-number">4.5.1.</span> <span class="toc-text">
+          find</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grep%E6%8C%87%E4%BB%A4%E5%92%8C%E7%AE%A1%E9%81%93%E7%AC%A6%E5%8F%B7"><span class="toc-number">4.5.2.</span> <span class="toc-text">
+          grep指令和管道符号 |</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%B1%BB"><span class="toc-number">4.6.</span> <span class="toc-text">
+          压缩和解压类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gzip%E5%92%8Cgunzip"><span class="toc-number">4.6.1.</span> <span class="toc-text">
+          gzip和gunzip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#zip%E5%92%8Cunzip"><span class="toc-number">4.6.2.</span> <span class="toc-text">
+          zip和unzip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tar"><span class="toc-number">4.6.3.</span> <span class="toc-text">
+          tar</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%84%E7%AE%A1%E7%90%86%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86"><span class="toc-number">5.</span> <span class="toc-text">
+          组管理和权限管理</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/yuhangyuan.svg" alt="avatar"></div><p class="sidebar-ov-author__text">今天你学习了吗？</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">11</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">分类</div></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>laoyu</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.2.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = 'nick,mail,link';
+
+  guest_info = guest_info.split(',').filter(function(item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#valine-container',
+    appId: '99jrkcmceSxgBaYCBIkpumzl-gzGzoHsz',
+    appKey: 'UGaFxk4FuhO9pSQMROFSUvms',
+    notify: true,
+    verify: true,
+    placeholder: '留下你想说的话吧',
+    avatar: 'mp',
+    meta: guest_info,
+    pageSize: '10' || 10,
+    visitor: false,
+    recordIP: false,
+    lang: '' || 'zh-cn',
+    path: window.location.pathname
+  });
+}
+
+if (false) {
+  loadValine();
+} else {
+  window.addEventListener('DOMContentLoaded', loadValine, false);
+}</script><script src="/js/utils.js?v=2.1.1"></script><script src="/js/stun-boot.js?v=2.1.1"></script><script src="/js/scroll.js?v=2.1.1"></script><script src="/js/header.js?v=2.1.1"></script><script src="/js/sidebar.js?v=2.1.1"></script></body></html>
