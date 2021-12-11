@@ -8,7 +8,7 @@
 <meta property="og:image" content="https://s2.loli.net/2021/12/09/kH1lvsnhu9F5zrE.png">
 <meta property="og:image" content="https://i.bmp.ovh/imgs/2021/12/75b428b334a67dc5.png">
 <meta property="article:published_time" content="2021-12-09T12:19:09.370Z">
-<meta property="article:modified_time" content="2021-12-11T12:46:36.221Z">
+<meta property="article:modified_time" content="2021-12-11T12:50:43.920Z">
 <meta property="article:author" content="laoyu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.loli.net/2021/12/09/kH1lvsnhu9F5zrE.png"><title>linux学习笔记 | Laoyu'blog</title><link ref="canonical" href="http://example.com/2021/12/09/linux%E7%AC%94%E8%AE%B0/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
@@ -171,86 +171,6 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.2.0"><lin
 </ul>
 <p>用户注销后系统回到“Login”提示符下等待下一次用户的登录。通常在用户下次进行登录时，系统会提供一些报告给用户查阅，例如用户最近一次注册的时间和使用的终端信息。</p>
 
-        <h1 id="用户管理"   >
-          <a href="#用户管理" class="heading-link"><i class="fas fa-link"></i></a>用户管理</h1>
-      
-        <h2 id="用户"   >
-          <a href="#用户" class="heading-link"><i class="fas fa-link"></i></a>用户</h2>
-      
-        <h3 id="添加用户"   >
-          <a href="#添加用户" class="heading-link"><i class="fas fa-link"></i></a>添加用户</h3>
-      <pre><code>useradd username</code></pre>
-<p>注：</p>
-<ul>
-<li><p>用户创建成功后，会自动创建和用户同名的家目录 /home/username</p>
-</li>
-<li><p>useradd -d dir username   给新创建的用户指定家目录</p>
-</li>
-</ul>
-
-        <h3 id="修改口令"   >
-          <a href="#修改口令" class="heading-link"><i class="fas fa-link"></i></a>修改口令</h3>
-      <pre><code>passwd username</code></pre>
-
-        <h3 id="删除用户"   >
-          <a href="#删除用户" class="heading-link"><i class="fas fa-link"></i></a>删除用户</h3>
-      <pre><code>userdel username（保留家目录）
-userdel -r username(同时删除家目录)</code></pre>
-
-        <h3 id="修改用户名"   >
-          <a href="#修改用户名" class="heading-link"><i class="fas fa-link"></i></a>修改用户名</h3>
-      <pre><code>usermod -l new-name old-name</code></pre>
-
-        <h3 id="锁定用户使其不能登录"   >
-          <a href="#锁定用户使其不能登录" class="heading-link"><i class="fas fa-link"></i></a>锁定用户使其不能登录</h3>
-      <pre><code>usermod -L username</code></pre>
-
-        <h3 id="查询用户信息指令"   >
-          <a href="#查询用户信息指令" class="heading-link"><i class="fas fa-link"></i></a>查询用户信息指令</h3>
-      
-        <h4 id="基本语法"   >
-          <a href="#基本语法" class="heading-link"><i class="fas fa-link"></i></a>基本语法</h4>
-      <pre><code>id username </code></pre>
-
-        <h3 id="切换用户"   >
-          <a href="#切换用户" class="heading-link"><i class="fas fa-link"></i></a>切换用户</h3>
-      <pre><code>su username</code></pre>
-
-        <h3 id="查看当前用户-登录用户"   >
-          <a href="#查看当前用户-登录用户" class="heading-link"><i class="fas fa-link"></i></a>查看当前用户/登录用户</h3>
-      <pre><code>whoami
-who am i</code></pre>
-
-        <h2 id="用户组"   >
-          <a href="#用户组" class="heading-link"><i class="fas fa-link"></i></a>用户组</h2>
-      
-        <h3 id="新增组"   >
-          <a href="#新增组" class="heading-link"><i class="fas fa-link"></i></a>新增组</h3>
-      <pre><code>groupadd groupname</code></pre>
-
-        <h3 id="删除组"   >
-          <a href="#删除组" class="heading-link"><i class="fas fa-link"></i></a>删除组</h3>
-      <pre><code>groupdel groupname</code></pre>
-
-        <h3 id="修改用户的组"   >
-          <a href="#修改用户的组" class="heading-link"><i class="fas fa-link"></i></a>修改用户的组</h3>
-      <pre><code>usermod -g groupname username</code></pre>
-
-        <h2 id="用户和组相关文件"   >
-          <a href="#用户和组相关文件" class="heading-link"><i class="fas fa-link"></i></a>用户和组相关文件</h2>
-      
-        <h3 id="etc-passwd-文件"   >
-          <a href="#etc-passwd-文件" class="heading-link"><i class="fas fa-link"></i></a>/etc/passwd 文件</h3>
-      <p><strong>用户</strong>的配置文件，记录用户的各种信息</p>
-<p>每行的含义：</p>
-<pre><code>    用户名：口令：用户标识号：组标识号：注释行描叙：主目录：登录shell</code></pre>
-
-        <h3 id="etc-shadow-文件"   >
-          <a href="#etc-shadow-文件" class="heading-link"><i class="fas fa-link"></i></a>/etc/shadow 文件</h3>
-      <p><strong>组</strong>的配置文件，记录linux包含的组的信息</p>
-<p>每行的意义：</p>
-<pre><code>    组名：口令：组标识号：组内用户列表</code></pre>
-
         <h1 id="实用指令"   >
           <a href="#实用指令" class="heading-link"><i class="fas fa-link"></i></a>实用指令</h1>
       
@@ -405,8 +325,8 @@ cd.. : 回到当前工作目录的上一级目录</code></pre>
           <a href="#date" class="heading-link"><i class="fas fa-link"></i></a>date</h3>
       <p>显示当前日期</p>
 
-        <h4 id="基本语法-1"   >
-          <a href="#基本语法-1" class="heading-link"><i class="fas fa-link"></i></a>基本语法</h4>
+        <h4 id="基本语法"   >
+          <a href="#基本语法" class="heading-link"><i class="fas fa-link"></i></a>基本语法</h4>
       <ul>
 <li><code>date + %Y</code>：显示当前年份</li>
 <li><code>date + %m</code>：显示当前月份</li>
@@ -492,6 +412,86 @@ gunzip：解压缩文件命令</code></pre>
 <li><code>-z</code>：打包同时压缩，此时产生的文件后缀名为<code>.tar.gz</code></li>
 <li><code>-x</code>：解包.tar文件</li>
 </ul>
+
+        <h1 id="用户管理"   >
+          <a href="#用户管理" class="heading-link"><i class="fas fa-link"></i></a>用户管理</h1>
+      
+        <h2 id="用户"   >
+          <a href="#用户" class="heading-link"><i class="fas fa-link"></i></a>用户</h2>
+      
+        <h3 id="添加用户"   >
+          <a href="#添加用户" class="heading-link"><i class="fas fa-link"></i></a>添加用户</h3>
+      <pre><code>useradd username</code></pre>
+<p>注：</p>
+<ul>
+<li><p>用户创建成功后，会自动创建和用户同名的家目录 /home/username</p>
+</li>
+<li><p>useradd -d dir username   给新创建的用户指定家目录</p>
+</li>
+</ul>
+
+        <h3 id="修改口令"   >
+          <a href="#修改口令" class="heading-link"><i class="fas fa-link"></i></a>修改口令</h3>
+      <pre><code>passwd username</code></pre>
+
+        <h3 id="删除用户"   >
+          <a href="#删除用户" class="heading-link"><i class="fas fa-link"></i></a>删除用户</h3>
+      <pre><code>userdel username（保留家目录）
+userdel -r username(同时删除家目录)</code></pre>
+
+        <h3 id="修改用户名"   >
+          <a href="#修改用户名" class="heading-link"><i class="fas fa-link"></i></a>修改用户名</h3>
+      <pre><code>usermod -l new-name old-name</code></pre>
+
+        <h3 id="锁定用户使其不能登录"   >
+          <a href="#锁定用户使其不能登录" class="heading-link"><i class="fas fa-link"></i></a>锁定用户使其不能登录</h3>
+      <pre><code>usermod -L username</code></pre>
+
+        <h3 id="查询用户信息指令"   >
+          <a href="#查询用户信息指令" class="heading-link"><i class="fas fa-link"></i></a>查询用户信息指令</h3>
+      
+        <h4 id="基本语法-1"   >
+          <a href="#基本语法-1" class="heading-link"><i class="fas fa-link"></i></a>基本语法</h4>
+      <pre><code>id username </code></pre>
+
+        <h3 id="切换用户"   >
+          <a href="#切换用户" class="heading-link"><i class="fas fa-link"></i></a>切换用户</h3>
+      <pre><code>su username</code></pre>
+
+        <h3 id="查看当前用户-登录用户"   >
+          <a href="#查看当前用户-登录用户" class="heading-link"><i class="fas fa-link"></i></a>查看当前用户/登录用户</h3>
+      <pre><code>whoami
+who am i</code></pre>
+
+        <h2 id="用户组"   >
+          <a href="#用户组" class="heading-link"><i class="fas fa-link"></i></a>用户组</h2>
+      
+        <h3 id="新增组"   >
+          <a href="#新增组" class="heading-link"><i class="fas fa-link"></i></a>新增组</h3>
+      <pre><code>groupadd groupname</code></pre>
+
+        <h3 id="删除组"   >
+          <a href="#删除组" class="heading-link"><i class="fas fa-link"></i></a>删除组</h3>
+      <pre><code>groupdel groupname</code></pre>
+
+        <h3 id="修改用户的组"   >
+          <a href="#修改用户的组" class="heading-link"><i class="fas fa-link"></i></a>修改用户的组</h3>
+      <pre><code>usermod -g groupname username</code></pre>
+
+        <h2 id="用户和组相关文件"   >
+          <a href="#用户和组相关文件" class="heading-link"><i class="fas fa-link"></i></a>用户和组相关文件</h2>
+      
+        <h3 id="etc-passwd-文件"   >
+          <a href="#etc-passwd-文件" class="heading-link"><i class="fas fa-link"></i></a>/etc/passwd 文件</h3>
+      <p><strong>用户</strong>的配置文件，记录用户的各种信息</p>
+<p>每行的含义：</p>
+<pre><code>    用户名：口令：用户标识号：组标识号：注释行描叙：主目录：登录shell</code></pre>
+
+        <h3 id="etc-shadow-文件"   >
+          <a href="#etc-shadow-文件" class="heading-link"><i class="fas fa-link"></i></a>/etc/shadow 文件</h3>
+      <p><strong>组</strong>的配置文件，记录linux包含的组的信息</p>
+<p>每行的意义：</p>
+<pre><code>    组名：口令：组标识号：组内用户列表</code></pre>
 
         <h1 id="组管理和权限管理"   >
           <a href="#组管理和权限管理" class="heading-link"><i class="fas fa-link"></i></a>组管理和权限管理</h1>
@@ -630,7 +630,7 @@ chmod 751  文件/目录名</code></pre>
           <a href="#修改文件-目录所在组—-chgrp" class="heading-link"><i class="fas fa-link"></i></a>修改文件/目录所在组—-chgrp</h2>
       <p>改变所在组：</p>
 <pre><code>chgrp newgroup 文件/目录</code></pre>
-</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2021/11/29/python/"><span class="paginator-prev__text">python学习笔记</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vi%E5%92%8Cvim%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2021/12/11/shell%E7%BC%96%E7%A8%8B/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">shell编程学习笔记</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2021/11/29/python/"><span class="paginator-prev__text">python学习笔记</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vi%E5%92%8Cvim%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">
           vi和vim编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.1.</span> <span class="toc-text">
           三种模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.1.1.</span> <span class="toc-text">
           命令模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.1.2.</span> <span class="toc-text">
@@ -643,62 +643,62 @@ chmod 751  文件/目录名</code></pre>
           重启</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E5%92%8C%E6%B3%A8%E9%94%80"><span class="toc-number">2.3.</span> <span class="toc-text">
           用户登录和注销</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BB%E5%BD%95"><span class="toc-number">2.3.1.</span> <span class="toc-text">
           登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%94%80"><span class="toc-number">2.3.2.</span> <span class="toc-text">
-          注销</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">
-          用户管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7"><span class="toc-number">3.1.</span> <span class="toc-text">
-          用户</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7"><span class="toc-number">3.1.1.</span> <span class="toc-text">
-          添加用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%8F%A3%E4%BB%A4"><span class="toc-number">3.1.2.</span> <span class="toc-text">
-          修改口令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7"><span class="toc-number">3.1.3.</span> <span class="toc-text">
-          删除用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E5%90%8D"><span class="toc-number">3.1.4.</span> <span class="toc-text">
-          修改用户名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%81%E5%AE%9A%E7%94%A8%E6%88%B7%E4%BD%BF%E5%85%B6%E4%B8%8D%E8%83%BD%E7%99%BB%E5%BD%95"><span class="toc-number">3.1.5.</span> <span class="toc-text">
-          锁定用户使其不能登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E6%8C%87%E4%BB%A4"><span class="toc-number">3.1.6.</span> <span class="toc-text">
-          查询用户信息指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">3.1.6.1.</span> <span class="toc-text">
-          基本语法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7"><span class="toc-number">3.1.7.</span> <span class="toc-text">
-          切换用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7-%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7"><span class="toc-number">3.1.8.</span> <span class="toc-text">
-          查看当前用户&#x2F;登录用户</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%BB%84"><span class="toc-number">3.2.</span> <span class="toc-text">
-          用户组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E7%BB%84"><span class="toc-number">3.2.1.</span> <span class="toc-text">
-          新增组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%BB%84"><span class="toc-number">3.2.2.</span> <span class="toc-text">
-          删除组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E7%9A%84%E7%BB%84"><span class="toc-number">3.2.3.</span> <span class="toc-text">
-          修改用户的组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%92%8C%E7%BB%84%E7%9B%B8%E5%85%B3%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.</span> <span class="toc-text">
-          用户和组相关文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#etc-passwd-%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.1.</span> <span class="toc-text">
-          &#x2F;etc&#x2F;passwd 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#etc-shadow-%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.2.</span> <span class="toc-text">
-          &#x2F;etc&#x2F;shadow 文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text">
-          实用指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E5%AE%9A%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB"><span class="toc-number">4.1.</span> <span class="toc-text">
-          指定运行级别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB%E8%AF%B4%E6%98%8E"><span class="toc-number">4.1.1.</span> <span class="toc-text">
-          运行级别说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A9%E6%8C%87%E4%BB%A4"><span class="toc-number">4.2.</span> <span class="toc-text">
-          帮助指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#man-%E8%8E%B7%E5%BE%97%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF"><span class="toc-number">4.2.1.</span> <span class="toc-text">
-          man - 获得帮助信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#help-%E6%8C%87%E4%BB%A4"><span class="toc-number">4.2.2.</span> <span class="toc-text">
-          help 指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%B1%BB"><span class="toc-number">4.3.</span> <span class="toc-text">
-          文件目录类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pwd"><span class="toc-number">4.3.1.</span> <span class="toc-text">
-          pwd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ls"><span class="toc-number">4.3.2.</span> <span class="toc-text">
-          ls</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cd"><span class="toc-number">4.3.3.</span> <span class="toc-text">
-          cd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mkdir"><span class="toc-number">4.3.4.</span> <span class="toc-text">
-          mkdir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rmdir"><span class="toc-number">4.3.5.</span> <span class="toc-text">
-          rmdir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#touch"><span class="toc-number">4.3.6.</span> <span class="toc-text">
-          touch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cp"><span class="toc-number">4.3.7.</span> <span class="toc-text">
-          cp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mv"><span class="toc-number">4.3.8.</span> <span class="toc-text">
-          mv</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rm"><span class="toc-number">4.3.9.</span> <span class="toc-text">
-          rm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cat"><span class="toc-number">4.3.10.</span> <span class="toc-text">
-          cat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#more"><span class="toc-number">4.3.11.</span> <span class="toc-text">
-          more</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#less"><span class="toc-number">4.3.12.</span> <span class="toc-text">
-          less</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#echo"><span class="toc-number">4.3.13.</span> <span class="toc-text">
-          echo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#head"><span class="toc-number">4.3.14.</span> <span class="toc-text">
-          head</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tail"><span class="toc-number">4.3.15.</span> <span class="toc-text">
-          tail</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gt-%E6%8C%87%E4%BB%A4%E5%92%8C-gt-gt-%E6%8C%87%E4%BB%A4"><span class="toc-number">4.3.16.</span> <span class="toc-text">
-          &gt;指令和&gt;&gt;指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ln"><span class="toc-number">4.3.17.</span> <span class="toc-text">
-          ln</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#history"><span class="toc-number">4.3.18.</span> <span class="toc-text">
-          history</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9F%E7%B1%BB"><span class="toc-number">4.4.</span> <span class="toc-text">
-          时间日期类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#date"><span class="toc-number">4.4.1.</span> <span class="toc-text">
-          date</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95-1"><span class="toc-number">4.4.1.1.</span> <span class="toc-text">
-          基本语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E7%B3%BB%E7%BB%9F%E5%BD%93%E5%89%8D%E6%97%B6%E9%97%B4"><span class="toc-number">4.4.1.2.</span> <span class="toc-text">
-          设置系统当前时间</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cal"><span class="toc-number">4.4.2.</span> <span class="toc-text">
-          cal</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E6%9F%A5%E6%89%BE%E7%B1%BB"><span class="toc-number">4.5.</span> <span class="toc-text">
-          搜索查找类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#find"><span class="toc-number">4.5.1.</span> <span class="toc-text">
-          find</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grep%E6%8C%87%E4%BB%A4%E5%92%8C%E7%AE%A1%E9%81%93%E7%AC%A6%E5%8F%B7"><span class="toc-number">4.5.2.</span> <span class="toc-text">
-          grep指令和管道符号 |</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%B1%BB"><span class="toc-number">4.6.</span> <span class="toc-text">
-          压缩和解压类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gzip%E5%92%8Cgunzip"><span class="toc-number">4.6.1.</span> <span class="toc-text">
-          gzip和gunzip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#zip%E5%92%8Cunzip"><span class="toc-number">4.6.2.</span> <span class="toc-text">
-          zip和unzip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tar"><span class="toc-number">4.6.3.</span> <span class="toc-text">
-          tar</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%84%E7%AE%A1%E7%90%86%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86"><span class="toc-number">5.</span> <span class="toc-text">
+          注销</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text">
+          实用指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E5%AE%9A%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB"><span class="toc-number">3.1.</span> <span class="toc-text">
+          指定运行级别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB%E8%AF%B4%E6%98%8E"><span class="toc-number">3.1.1.</span> <span class="toc-text">
+          运行级别说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A9%E6%8C%87%E4%BB%A4"><span class="toc-number">3.2.</span> <span class="toc-text">
+          帮助指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#man-%E8%8E%B7%E5%BE%97%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF"><span class="toc-number">3.2.1.</span> <span class="toc-text">
+          man - 获得帮助信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#help-%E6%8C%87%E4%BB%A4"><span class="toc-number">3.2.2.</span> <span class="toc-text">
+          help 指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%B1%BB"><span class="toc-number">3.3.</span> <span class="toc-text">
+          文件目录类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pwd"><span class="toc-number">3.3.1.</span> <span class="toc-text">
+          pwd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ls"><span class="toc-number">3.3.2.</span> <span class="toc-text">
+          ls</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cd"><span class="toc-number">3.3.3.</span> <span class="toc-text">
+          cd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mkdir"><span class="toc-number">3.3.4.</span> <span class="toc-text">
+          mkdir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rmdir"><span class="toc-number">3.3.5.</span> <span class="toc-text">
+          rmdir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#touch"><span class="toc-number">3.3.6.</span> <span class="toc-text">
+          touch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cp"><span class="toc-number">3.3.7.</span> <span class="toc-text">
+          cp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mv"><span class="toc-number">3.3.8.</span> <span class="toc-text">
+          mv</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rm"><span class="toc-number">3.3.9.</span> <span class="toc-text">
+          rm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cat"><span class="toc-number">3.3.10.</span> <span class="toc-text">
+          cat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#more"><span class="toc-number">3.3.11.</span> <span class="toc-text">
+          more</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#less"><span class="toc-number">3.3.12.</span> <span class="toc-text">
+          less</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#echo"><span class="toc-number">3.3.13.</span> <span class="toc-text">
+          echo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#head"><span class="toc-number">3.3.14.</span> <span class="toc-text">
+          head</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tail"><span class="toc-number">3.3.15.</span> <span class="toc-text">
+          tail</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gt-%E6%8C%87%E4%BB%A4%E5%92%8C-gt-gt-%E6%8C%87%E4%BB%A4"><span class="toc-number">3.3.16.</span> <span class="toc-text">
+          &gt;指令和&gt;&gt;指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ln"><span class="toc-number">3.3.17.</span> <span class="toc-text">
+          ln</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#history"><span class="toc-number">3.3.18.</span> <span class="toc-text">
+          history</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9F%E7%B1%BB"><span class="toc-number">3.4.</span> <span class="toc-text">
+          时间日期类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#date"><span class="toc-number">3.4.1.</span> <span class="toc-text">
+          date</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">3.4.1.1.</span> <span class="toc-text">
+          基本语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E7%B3%BB%E7%BB%9F%E5%BD%93%E5%89%8D%E6%97%B6%E9%97%B4"><span class="toc-number">3.4.1.2.</span> <span class="toc-text">
+          设置系统当前时间</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cal"><span class="toc-number">3.4.2.</span> <span class="toc-text">
+          cal</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E6%9F%A5%E6%89%BE%E7%B1%BB"><span class="toc-number">3.5.</span> <span class="toc-text">
+          搜索查找类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#find"><span class="toc-number">3.5.1.</span> <span class="toc-text">
+          find</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grep%E6%8C%87%E4%BB%A4%E5%92%8C%E7%AE%A1%E9%81%93%E7%AC%A6%E5%8F%B7"><span class="toc-number">3.5.2.</span> <span class="toc-text">
+          grep指令和管道符号 |</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%B1%BB"><span class="toc-number">3.6.</span> <span class="toc-text">
+          压缩和解压类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gzip%E5%92%8Cgunzip"><span class="toc-number">3.6.1.</span> <span class="toc-text">
+          gzip和gunzip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#zip%E5%92%8Cunzip"><span class="toc-number">3.6.2.</span> <span class="toc-text">
+          zip和unzip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tar"><span class="toc-number">3.6.3.</span> <span class="toc-text">
+          tar</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">
+          用户管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7"><span class="toc-number">4.1.</span> <span class="toc-text">
+          用户</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7"><span class="toc-number">4.1.1.</span> <span class="toc-text">
+          添加用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%8F%A3%E4%BB%A4"><span class="toc-number">4.1.2.</span> <span class="toc-text">
+          修改口令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7"><span class="toc-number">4.1.3.</span> <span class="toc-text">
+          删除用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E5%90%8D"><span class="toc-number">4.1.4.</span> <span class="toc-text">
+          修改用户名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%81%E5%AE%9A%E7%94%A8%E6%88%B7%E4%BD%BF%E5%85%B6%E4%B8%8D%E8%83%BD%E7%99%BB%E5%BD%95"><span class="toc-number">4.1.5.</span> <span class="toc-text">
+          锁定用户使其不能登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E6%8C%87%E4%BB%A4"><span class="toc-number">4.1.6.</span> <span class="toc-text">
+          查询用户信息指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95-1"><span class="toc-number">4.1.6.1.</span> <span class="toc-text">
+          基本语法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7"><span class="toc-number">4.1.7.</span> <span class="toc-text">
+          切换用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7-%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7"><span class="toc-number">4.1.8.</span> <span class="toc-text">
+          查看当前用户&#x2F;登录用户</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%BB%84"><span class="toc-number">4.2.</span> <span class="toc-text">
+          用户组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E7%BB%84"><span class="toc-number">4.2.1.</span> <span class="toc-text">
+          新增组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%BB%84"><span class="toc-number">4.2.2.</span> <span class="toc-text">
+          删除组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E7%9A%84%E7%BB%84"><span class="toc-number">4.2.3.</span> <span class="toc-text">
+          修改用户的组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%92%8C%E7%BB%84%E7%9B%B8%E5%85%B3%E6%96%87%E4%BB%B6"><span class="toc-number">4.3.</span> <span class="toc-text">
+          用户和组相关文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#etc-passwd-%E6%96%87%E4%BB%B6"><span class="toc-number">4.3.1.</span> <span class="toc-text">
+          &#x2F;etc&#x2F;passwd 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#etc-shadow-%E6%96%87%E4%BB%B6"><span class="toc-number">4.3.2.</span> <span class="toc-text">
+          &#x2F;etc&#x2F;shadow 文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%84%E7%AE%A1%E7%90%86%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86"><span class="toc-number">5.</span> <span class="toc-text">
           组管理和权限管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#linux%E7%BB%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="toc-number">5.1.</span> <span class="toc-text">
           linux组的基本介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6-%E7%9B%AE%E5%BD%95-%E6%89%80%E6%9C%89%E8%80%85"><span class="toc-number">5.2.</span> <span class="toc-text">
           文件&#x2F;目录 所有者</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%9A%84%E6%89%80%E6%9C%89%E8%80%85"><span class="toc-number">5.2.1.</span> <span class="toc-text">
@@ -723,7 +723,7 @@ chmod 751  文件/目录名</code></pre>
           通过+，-，&#x3D;变更权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E6%95%B0%E5%AD%97%E5%8F%98%E6%9B%B4%E6%9D%83%E9%99%90"><span class="toc-number">5.9.2.</span> <span class="toc-text">
           通过数字变更权限</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%89%80%E6%9C%89%E8%80%85%E2%80%94-chown"><span class="toc-number">5.10.</span> <span class="toc-text">
           修改文件所有者—-chown</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6-%E7%9B%AE%E5%BD%95%E6%89%80%E5%9C%A8%E7%BB%84%E2%80%94-chgrp"><span class="toc-number">5.11.</span> <span class="toc-text">
-          修改文件&#x2F;目录所在组—-chgrp</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/yuhangyuan.svg" alt="avatar"></div><p class="sidebar-ov-author__text">今天你学习了吗？</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">11</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">分类</div></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>laoyu</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.2.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+          修改文件&#x2F;目录所在组—-chgrp</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/yuhangyuan.svg" alt="avatar"></div><p class="sidebar-ov-author__text">今天你学习了吗？</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">12</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">分类</div></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>laoyu</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.2.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
   var GUEST_INFO = ['nick', 'mail', 'link'];
   var guest_info = 'nick,mail,link';
 
